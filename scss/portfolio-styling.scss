@@ -1,0 +1,499 @@
+/* Sergio Pacheco - Portfolio Site Styling */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun&display=swap');
+
+
+/* Basic SCSS Style Variables */
+$primary-font: 'Helvetica', sans-serif;
+$secondary-font: 'Karla';
+$label-font: 'Sarabun', sans-serif;
+$body-color: #0c1717;
+$primary-color: #1e8dd1;
+$secondary-color: #4DA8DA;
+$darkened-color: #161718;
+$primary-text: #1e8dd1;
+$secondary-text: #4DA8DA;
+$white-text: #fff;
+$overlay-color: rgba(0, 0, 0, 0.8);
+
+/* Animation CSS (using AOS animation library) */
+[aos = "fade"] 
+{
+    opacity: 0;
+    transition-property: opacity;
+}
+[aos = "fade"].aos-animate 
+{
+    opacity: 1;
+}
+
+html{ scroll-behavior:smooth; }
+body /* CSS for the page body */
+{
+    font-family: $secondary-font;
+    background: $body-color;
+    font-size: 1.2rem;
+    color: $white-text;
+
+    img, button{ caret-color: transparent; }
+}
+
+a { color: $primary-text; }
+a:hover { color: $secondary-text; text-decoration: none; }
+
+header
+{
+    background: $primary-color;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    height: 5rem;
+    a { color: $white-text; }
+}
+
+footer
+{
+    background: $primary-color;
+    color: $white-text;
+    position: static;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 300;  
+    text-align: center;
+    padding: 2rem 0;
+    min-height: 5rem;
+    margin-top: 5rem;
+
+    a { color: $white-text; }
+    a i { font-size: 1.5rem; padding: 0 1rem; }
+}
+
+/* Hamburger Menu Styling - START */
+.bar1, .bar2, .bar3 
+{
+    width: 3rem;
+    height: 0.5rem;
+    background-color: $white-text;
+    margin: .5rem 0;
+    transition: 0.2s;
+    border-radius: 3rem;
+}
+.hamburger.active .bar1 
+{
+    -webkit-transform: rotate(-45deg) translate(-0.7rem, 0.7rem);
+    transform: rotate(-45deg) translate(-0.7rem, 0.7rem);
+    margin-top: .5rem;
+}
+.hamburger.active .bar2 { opacity: 0; }
+.hamburger.active .bar3 
+{
+    -webkit-transform: rotate(45deg) translate(-0.7rem, -0.7rem);
+    transform: rotate(45deg) translate(-0.7rem, -0.7rem);
+}
+.hamburger:focus{ outline: none; }
+/* Hamburger Menu Styling - END */
+
+/* Header Nav CSS - START */
+#siteLogo
+{   
+    max-height: 4rem;
+    border-radius: 1rem;
+}
+#desktopNav{ display: none; }
+#mobileNav
+{
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    top: 5rem;
+    background: $primary-color;
+    left: 0px;
+}
+.no-scroll{ overflow: hidden; }
+/* Header Nav CSS - END */
+
+nav /* Nested CSS for Navigation Items */ 
+{
+    .nav-item
+    {
+        width: 10rem;
+        margin: 0 auto;
+    }
+    a 
+    { 
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+#contactAnch, #aboutAnch, #projectsAnch { position: relative; top: -5rem; }
+
+#welcomeSection{ min-height: 90vh; display: flex; }
+#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection{ padding: 5% 10%;}
+.welcome-text{ width: 90%; }
+.welcome-img
+{
+    background: $primary-text;
+    border-radius: 30rem;
+    border: 0.2rem solid $primary-text;
+    max-width: 15rem;
+}
+.resume-btn
+{
+    caret-color: transparent;
+    border: .2rem solid;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin: 1rem 0;
+}
+h1, h2
+{ 
+    color: $primary-text; 
+    font-weight: bold;
+}
+.section-header { margin-bottom: 1rem; }
+.header-subtxt { position: relative; top: -1rem; font-style: italic; font-size: 1rem; }
+#pageContent
+{
+    position: relative;
+    top: 5rem;
+}
+.resume-btn{ text-align: center; }
+.left-content, .right-content{ justify-content: center; }
+.coming-soon
+{
+    max-width: 20rem;
+    height: 20rem;
+    text-align: center;
+    padding: 3rem;
+    background: $secondary-color;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    margin: 1.5rem auto;
+    align-items: center;
+    display: inline-flex;
+}
+.proj-row
+{ 
+    justify-content: space-between; 
+
+    .proj-one, .proj-two, .proj-three, .proj-four
+    {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border-radius: 1rem;
+        min-height: 20rem;
+        width: 20rem;
+        overflow: hidden;
+        margin: 1rem auto;
+    }
+    .proj-one
+    { 
+        background-image: url(../images/gif/teenie-robo-screen.gif);
+        background-size: 85%;
+        background-position: center;
+        background-color: #bab6b3;
+    }
+    .proj-two
+    { 
+        background-image: url(../images/png/portfolio-web-screen.PNG); 
+        background-size: 85%;
+        background-position: center;
+        background-color: $primary-color;
+    }
+    .proj-three
+    { 
+        background-image: url(../images/gif/mario.gif);
+        background-size: 70%;
+        background-position: center;
+        background-color: #000;
+    }
+    .proj-four
+    { 
+        background-image: url(../images/png/teenie-robo-screen.PNG);
+        background-size: 70%;
+        background-position: center;
+        background-color: #bab6b3;
+    }
+}
+#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour
+{
+    opacity: 0;  
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    cursor: pointer;
+}
+#overlayOne, #overlayTwo, #overlayThree, #overlayFour 
+{
+    opacity: 0;
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    background-color: $overlay-color;
+    left: 0;
+    text-align: center;
+    padding: 5%;
+
+    &.active 
+    {
+        opacity: 1;
+        display: block;   
+    }
+
+    h2 { color: $white-text; text-transform: uppercase; }
+    p { font-size: 1rem; }
+    .tool
+    {
+        background-color: #1e8dd1;
+        padding: .5rem;
+        border-radius: 1rem;
+        margin-bottom: 3%;
+        margin-right: 1%;
+        width: 20%;
+        display: inline-table;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .project-links
+    {
+        margin-top: 1rem;
+        .project-btn
+        {
+            background-color: #0c1717;
+            padding: 1rem;
+            border-radius: 5rem;
+            font-size: 1rem;
+
+            &:hover{ background-color: $white-text; }
+        }
+    }
+
+    .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four 
+    {
+        caret-color: transparent;
+        position: absolute;
+        top: 4%;
+        right: 2%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 200;
+
+        &:hover{ color: $secondary-color; }
+    }
+}
+
+#clientsSection
+{
+    background: $secondary-color;
+    /*margin: 10% 0;*/
+
+    .section-header
+    { 
+        color: $white-text; 
+        margin-bottom: 2rem;
+    }
+}
+.company-logo{ width: 100%; margin-bottom: 1rem; }
+.mini-icon
+{
+    max-height: 1.5rem;
+    position: relative;
+    top: -0.25rem;
+}
+.about-img
+{
+    max-width: 80%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.toolkit-col
+{
+    margin-bottom: 3rem;
+    caret-color: transparent;
+    i
+    {
+        font-size: 3rem;
+        color: #4DA8DA;
+    }
+}
+.toolkit-icon
+{
+    width: 3rem;
+    min-width: 3rem;
+}
+.toolkit-name
+{
+    position: absolute;
+    bottom: -1.5rem;
+    font-family: $label-font;
+    font-size: 1rem;
+    min-width: 6rem;
+    text-align: center;
+}
+
+
+/* STUFF FOR CONTACT FORM - START */
+#contactSection
+{
+    background: $secondary-color;
+}
+.visuallyHidden:not(:focus):not(:active) 
+{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    margin: -1rem;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0);
+    overflow: hidden;
+}
+.contact .contactContainer .contactForm input, .contact .contactContainer .contactForm textarea 
+{
+    padding: .4rem;
+    margin: 1rem 0;
+    border: .2rem solid $primary-color;
+    border-radius: .2rem;
+    outline: none;
+}
+.contact .contactContainer 
+{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .contactContainer .contactInformation, .contact .contactContainer form 
+{
+    display: flex;
+    flex-direction: column;
+}
+.contact .contactContainer .contactInformation .socialIcons 
+{ 
+    padding: 0;
+
+    i{ padding: 0 1rem 0 0; font-size: 2rem; }
+    a:hover { color: $white-text; }
+}
+.contact .contactContainer .contactForm button 
+{
+    background-color: $primary-color;
+    border: .2rem solid $primary-color;
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    width: auto;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: $white-text;
+    text-transform: uppercase;
+}
+.contact .contactContainer .contactForm button:hover
+{
+    background: $white-text;
+    color: $primary-color;
+    cursor: pointer;
+}
+#message{ max-height: 15rem; min-height: 5rem;}
+/* STUFF FOR CONTACT FORM - END */
+
+@media (min-width: 576px) /* Breakpoint for Small Devices and up */
+{
+    .toolkit-col
+    {
+        margin-bottom: 3rem;
+    }
+}
+@media (min-width: 768px) /* Breakpoint for Medium Devices and up */
+{
+    .company-logo{ width: 75%; }
+    .about-img{ max-width: 75%; margin: 0; }
+    .left-content{ justify-content: flex-start; }
+    .right-content{ justify-content: flex-end; }
+    #pageContent { text-align: left; }
+
+    #contactAnch, #aboutAnch, #projectsAnch { top: -2rem; }
+    .proj-row
+    {
+        .proj-one, .proj-two
+        {
+            margin: 0;
+            background-size: 65%;
+        }
+        .col-md-6
+        {   
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 47.5%;
+            flex: 0 0 47.5%;
+            max-width: 47.5%;
+        }
+    }
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour
+    {
+        h2{ font-size: 2rem; }
+        p, .project-btn{ font-size: 1rem; margin-bottom: .5rem; }
+    }
+    .coming-soon{ max-width: 100%; height: auto; display: block; }
+}
+@media (min-width: 992px) /* Breakpoint for Large Devices and up */
+{
+    header{ position: fixed; background: $body-color; }
+    footer{ position: static; background: $body-color; }
+    /* Header Nav CSS - START */
+    .hamburger, #mobileNav{ display: none; }
+    #desktopNav{ display: flex; }
+    .no-scroll{ overflow: visible; }
+    nav /* Nested CSS for Navigation Items */
+    {
+        .nav-item { width: auto; }
+        a 
+        { 
+            font-size: 1.2rem;
+            margin: 0 1rem;
+        }
+    }
+    /* Header Nav CSS - END */
+    #pageContent{ top: 2rem; }
+    .company-logo{ margin-bottom: 0; }
+    .coming-soon{ width: 100%; }
+    .proj-row
+    {
+        margin-bottom: 3%;
+        .proj-one, .proj-two
+        {
+            min-height: 20rem;
+            width: 100%;
+        }
+    }
+    .about-img{ margin: 0; }
+    .w-100{ display: none; }
+
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour
+    {
+        p, .tool, .project-btn{ font-size: 1.2rem; }
+    }
+    .coming-soon{ margin: 0; }
+}
+@media (min-width: 1200px) /* Breakpoint for X-Large Devices and up */
+{
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour
+    {
+        padding: 3.5%;
+        h2{ font-size: 2.5rem; }
+        .project-links{ margin-top: .5rem; }
+        p, .project-btn{ margin-bottom: 1rem; }
+    }
+}

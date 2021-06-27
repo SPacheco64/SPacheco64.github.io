@@ -130,6 +130,19 @@ nav /* Nested CSS for Navigation Items */
         margin-bottom: 1rem;
     }
 }
+
+#screenOverlay
+{ 
+    display: none; 
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+}
+#screenOverlay.active{ display: block; }
 #contactAnch, #aboutAnch, #projectsAnch { position: relative; top: -5rem; }
 
 #welcomeSection{ min-height: 90vh; display: flex; }
@@ -466,6 +479,7 @@ h1, h2
         }
     }
     /* Header Nav CSS - END */
+    #screenOverlay, #screenOverlay.active{ display: none; }
     #pageContent{ top: 2rem; }
     .company-logo{ margin-bottom: 0; }
     .coming-soon{ width: 100%; }

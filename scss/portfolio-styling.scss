@@ -358,7 +358,7 @@ h1, h2
 }
 
 
-/* STUFF FOR CONTACT FORM - START */
+/* STYLING FOR CONTACT FORM - START */
 #contactSection
 {
     background: $secondary-color;
@@ -420,8 +420,9 @@ h1, h2
     color: $primary-color;
     cursor: pointer;
 }
-#message{ max-height: 15rem; min-height: 5rem;}
-/* STUFF FOR CONTACT FORM - END */
+#message{ max-height: 15rem; min-height: 5rem; }
+.submit-container, .socialIcons{ text-align: center; }
+/* STYLING FOR CONTACT FORM - END */
 
 @media (min-width: 576px) /* Breakpoint for Small Devices and up */
 {
@@ -500,6 +501,8 @@ h1, h2
         p, .tool, .project-btn{ font-size: 1.2rem; }
     }
     .coming-soon{ margin: 0; }
+
+    .submit-container, .socialIcons{ text-align: left; }
 }
 @media (min-width: 1200px) /* Breakpoint for X-Large Devices and up */
 {

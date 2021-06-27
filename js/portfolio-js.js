@@ -3,15 +3,18 @@
 // Swaps between Hamburger Icon to 'X' and displays the dropdown menu
 $(document).ready(function () 
 {
+    const pageBody = document.body;
+    const screenOverlay = document.getElementById("screenOverlay");
+
     $(".hamburger").click(function () 
     {
         $(".hamburger").toggleClass("active");
-        $(body).toggleClass("no-scroll");
+        screenOverlay.classList.toggle("active");
+        pageBody.classList.toggle("no-scroll");
     });
-    $(".link").click(function () 
+    $(".nav-link").click(function () 
     {
-        $(".hamburger").toggleClass("active");
-        $(body).toggleClass("no-scroll");
+        $(".hamburger").click();
     });
 });
 
@@ -31,22 +34,6 @@ $(document.getElementById("projContainerTwo")).click(function ()
 $(".close-overlay-two").click(function () 
 {
     $(document.getElementById("overlayTwo")).toggleClass("active");
-});
-$(document.getElementById("projContainerThree")).click(function () 
-{
-    $(document.getElementById("overlayThree")).toggleClass("active");
-});
-$(".close-overlay-three").click(function () 
-{
-    $(document.getElementById("overlayThree")).toggleClass("active");
-});
-$(document.getElementById("projContainerFour")).click(function () 
-{
-    $(document.getElementById("overlayFour")).toggleClass("active");
-});
-$(".close-overlay-four").click(function () 
-{
-    $(document.getElementById("overlayFour")).toggleClass("active");
 });
 
 // Initialization for the AOS CSS Animations

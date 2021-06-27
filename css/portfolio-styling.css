@@ -138,6 +138,21 @@ nav a {
   margin-bottom: 1rem;
 }
 
+#screenOverlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+#screenOverlay.active {
+  display: block;
+}
+
 #contactAnch, #aboutAnch, #projectsAnch {
   position: relative;
   top: -5rem;
@@ -538,6 +553,9 @@ h1, h2 {
     margin: 0 1rem;
   }
   /* Header Nav CSS - END */
+  #screenOverlay, #screenOverlay.active {
+    display: none;
+  }
   #pageContent {
     top: 2rem;
   }

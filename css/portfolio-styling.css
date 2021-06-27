@@ -402,7 +402,7 @@ h1, h2 {
   text-align: center;
 }
 
-/* STUFF FOR CONTACT FORM - START */
+/* STYLING FOR CONTACT FORM - START */
 #contactSection {
   background: #4DA8DA;
 }
@@ -475,7 +475,11 @@ h1, h2 {
   min-height: 5rem;
 }
 
-/* STUFF FOR CONTACT FORM - END */
+.submit-container, .socialIcons {
+  text-align: center;
+}
+
+/* STYLING FOR CONTACT FORM - END */
 @media (min-width: 576px) {
   .toolkit-col {
     margin-bottom: 3rem;
@@ -583,6 +587,9 @@ h1, h2 {
   }
   .coming-soon {
     margin: 0;
+  }
+  .submit-container, .socialIcons {
+    text-align: left;
   }
 }
 

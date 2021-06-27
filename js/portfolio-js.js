@@ -12,7 +12,7 @@ $(document).ready(function ()
         screenOverlay.classList.toggle("active");
         pageBody.classList.toggle("no-scroll");
     });
-    $(".nav-link").click(function () 
+    $("#mobileNav .nav-link").click(function () 
     {
         $(".hamburger").click();
     });

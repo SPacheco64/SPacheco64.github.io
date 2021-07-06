@@ -11,7 +11,7 @@
 	$email = $_POST["email"];
 	$message = $_POST["message"];
 
-	if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email_address))
+	if (!preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email))
 	{
 		$errors .= "\n Error: Invalid email address";
 	}
@@ -20,12 +20,19 @@
 	{
 		$to = $myemail;
 		$email_subject = "Portfolio Site Message From: $name";
-		$email_body = "$message".
+		$email_body = "$message\n\n".
 		
-		$headers = "From: $myemail\n";
+		$headers = "From: $name\n";
 		
-		$headers .= "Reply-To: $email_address";
-		
-		mail($to, $email_subject, $email_body, $headers);
+		$headers .= "Reply to: $email";	
+
+		if(mail($to, $email_subject, $email_body, $headers))
+		{
+			header('Location: thank-you.html');
+		} 
+		else
+		{
+			echo 'Unable to send message. Please make sure all information is correct!';
+		}
 	}
 ?>

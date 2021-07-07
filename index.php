@@ -230,7 +230,7 @@
             <div id = "toolkitSection" class = "container-fluid">
                 <h2 class = "section-header">My Toolkit</h2> 
     
-                <div class = "row align-items-center">
+                <div class = "row align-items-center" data-aos = "flip-up" data-aos-once = "true">
                     <div class = "col-3 d-flex justify-content-center mx-auto toolkit-col">
                         <i class="fab fa-html5"></i>
                         <div class = "toolkit-name">
@@ -260,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = "row align-items-center">
+                <div class = "row align-items-center" data-aos = "flip-up" data-aos-once = "true">
                     <div class = "col-3 d-flex justify-content-center mx-auto toolkit-col">
                         <i class="fab fa-js-square"></i>
                         <div class = "toolkit-name">
@@ -290,7 +290,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = "row align-items-center">
+                <div class = "row align-items-center" data-aos = "flip-up" data-aos-once = "true">
                     <div class = "col-3 d-flex justify-content-center mx-auto toolkit-col">
                         <img class = "toolkit-icon" alt = "" src = "images/png/visualstudio-icon.png">
                         <div class = "toolkit-name">
@@ -350,11 +350,8 @@
                             <div class = "contactForm col-md-6">
                                 <form name = "contact" method = "POST" action = "message-retrieval.php">
                                     <input type = "hidden" name = "form-name" value = "contact">
-                                    <label for = "name" class = "visuallyHidden"> Name </label>
                                     <input type = "text" name = "name" id = "name" placeholder = "Name" autocomplete = "off" required = "true">
-                                    <label class = "visuallyHidden" for = "email"> Email </label>
                                     <input type = "email" name = "email" id = "email" placeholder = "E-mail" required = "true">
-                                    <label class = "visuallyHidden" for = "message" autocomplete = "off"> Message </label>
                                     <textarea name = "message" id = "message" placeholder = "Message" required = "true"></textarea>
                                     <div class = "submit-container">
                                         <button name = "send" type = "submit" value = "Submit"> Send Message </button>

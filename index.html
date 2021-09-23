@@ -5,6 +5,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>Sergio Pacheco | Dev Portfolio</title>
+        <link rel = "shortcut icon" type = "image/jpg" href = "images/png/site-favicon.ico"/>
         <meta name = "viewport" content = "width = device-width, initial-scale = 1">
         
         <!-- Bootstrap CSS -->
@@ -19,6 +20,9 @@
         <link rel = "stylesheet" href = "css/portfolio-styling.css">
 
         <!-- Custom PHP for Sending Messages -->
+        <?php
+            include("message-retrieval.php")
+        ?>
 
         <!-- AOS CSS Animations Includes-->
         <link href = "https://unpkg.com/aos@2.3.1/dist/aos.css" rel = "stylesheet">
@@ -29,6 +33,8 @@
     </head>
 
     <body>
+        <button onclick = "topFunction()" id = "scrollToTopBtn"><i class="fas fa-arrow-alt-circle-up"></i></button>
+
         <!-- Site Header -->
         <header>
             <!-- Header Navigation -->
@@ -87,23 +93,23 @@
             <div id = "welcomeSection" class = "container-fluid">
                 <div class = "row align-items-center">
                     <div class = "col-md-7 d-flex left-content">
-                        <div class = "welcome-text">
+                        <div class = "welcome-text" data-aos = "fade-up" data-aos-once = "true">
                             <h1>Hiya! My name is Sergio.</h1>
                             I am a passionate Front-End Developer <i>(and occasional designer)</i> who enjoys developing creative, fully functional experiences for users.<br>
                             <a target = "_blank" class = "resume-btn" href = "images/pdf/Sergio Pacheco - Resume.pdf">
-                                Check out my Resum&eacute; <i class="fas fa-file-download"></i>
+                                Check out my R&eacute;sum&eacute; <i class="fas fa-file-download"></i>
                             </a>
                         </div>
                     </div>
-                    <div class = "col-md-5 d-flex right-content">
+                    <div class = "col-md-5 d-flex right-content" data-aos = "fade-up" data-aos-once = "true">
                         <img class = "welcome-img" alt = "" src = "images/jpg/me-1.jpg">
                     </div>
                 </div>
             </div>
 
-            <span id = "projectsAnch">&nbsp;</span>
+            <span class = "anchor" id = "projectsAnch">&nbsp;</span>
             <div id = "projectsSection" class = "container-fluid">
-                <h2 class = "section-header">Project Showcase</h2>
+                <h2 class = "section-header">Personal Project Showcase</h2>
                 <span class = "header-subtxt">(Click on a project for details)</span>
                 <div class = "row proj-row">
                     <div class = "proj-one col-md-6 d-flex left-content" data-aos = "flip-right" data-aos-once = "true">
@@ -124,7 +130,7 @@
                                     HTML5
                                 </span>
                                 <span class = "tool">
-                                    Sass
+                                    SCSS
                                 </span>
                                 <span class = "tool">
                                     JavaScript
@@ -157,7 +163,7 @@
                                     HTML5
                                 </span>
                                 <span class = "tool">
-                                    Sass
+                                    SCSS
                                 </span>
                                 <span class = "tool">
                                     Bootstrap
@@ -184,18 +190,18 @@
                 </div>
             </div>
 
-            <span id = "aboutAnch">&nbsp;</span>
+            <span class = "anchor" id = "aboutAnch">&nbsp;</span>
             <div id = "aboutSection" class = "container-fluid">
                 <div class = "row align-items-center">
                     <div class = "col-md-7 d-flex left-content">
-                        <div>
+                        <div data-aos = "fade-up" data-aos-once = "true">
                             <h2 class = "section-header">About Me</h2> 
                             I am a graduate of the <a href = "https://www.ucf.edu">University of Central Florida</a>, still looking to learn and grow as a developer each day.
                             When I am not coding things up, or spoiling my cat, I like to spend my time playing games with my friends, drinking copious amounts of tea and
                             practicing digital/sprite art <img class = "mini-icon" alt = "" src = "images/gif/blob-sprite.gif">.
                         </div>
                     </div>
-                    <div class = "col-md-5 d-flex right-content">
+                    <div class = "col-md-5 d-flex right-content" data-aos = "fade-down" data-aos-once = "true">
                         <img class = "about-img" alt = "" src = "images/jpg/me-3.jpg">
                     </div>
                 </div>
@@ -225,7 +231,7 @@
             </div>
 
             <div id = "toolkitSection" class = "container-fluid">
-                <h2 class = "section-header">My Toolkit</h2> 
+                <h2 class = "section-header">My Tech Stack</h2> 
     
                 <div class = "row align-items-center" data-aos = "flip-up" data-aos-once = "true">
                     <div class = "col-3 d-flex justify-content-center mx-auto toolkit-col">
@@ -319,7 +325,7 @@
                 </div>
             </div>
 
-            <span id = "contactAnch">&nbsp;</span>
+            <span class = "anchor" id = "contactAnch">&nbsp;</span>
             <div id = "contactSection" class = "container-fluid">
                 <section class = "contact aos-init aos-animate" data-aos = "fade-up" data-aos-once = "true" id = "contact">
                     <div class = "contactContainer wrapper">
@@ -345,7 +351,7 @@
                             </div>
     
                             <div class = "contactForm col-md-6">
-                                <form name = "contact" method = "POST" action = "">
+                                <form name = "contact" method = "POST" action = "message-retrieval.php">
                                     <input type = "hidden" name = "form-name" value = "contact">
                                     <input type = "text" name = "name" id = "name" placeholder = "Name" autocomplete = "off" required = "true">
                                     <input type = "email" name = "email" id = "email" placeholder = "E-mail" required = "true">

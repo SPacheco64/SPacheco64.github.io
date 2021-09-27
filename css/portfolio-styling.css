@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: "Karla";
-  background: #0c1717;
+  background: #0c171f;
   font-size: 1.2rem;
   color: #fff;
 }
@@ -351,13 +351,7 @@ h1, h2 {
   color: #4DA8DA;
 }
 
-#clientsSection {
-  background: #4DA8DA;
-  /*margin: 10% 0;*/
-}
-
 #clientsSection .section-header {
-  color: #fff;
   margin-bottom: 2rem;
 }
 
@@ -560,11 +554,11 @@ h1, h2 {
 @media (min-width: 992px) {
   header {
     position: fixed;
-    background: #0c1717;
+    background: #0c171f;
   }
   footer {
     position: static;
-    background: #0c1717;
+    background: #0c171f;
   }
   /* Header Nav CSS - START */
   .hamburger, #mobileNav {

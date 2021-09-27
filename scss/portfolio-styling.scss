@@ -316,7 +316,7 @@ h1, h2
 
     .section-header
     { 
-        //color: $white-text; 
+        color: $white-text; 
         margin-bottom: 2rem;
     }
 }
@@ -447,7 +447,7 @@ h1, h2
     cursor: pointer;
     i
     {
-        font-size: 3.5rem;
+        font-size: 3rem;
         border: .1rem solid $white-text;
         border-radius: 100%;
         color: $primary-color;
@@ -544,7 +544,6 @@ h1, h2
         
         i
         {
-            font-size: 3rem;
             top: 0;
             -webkit-transition: top 0.3s ease-out;
             -moz-transition: top 0.3s ease-out;

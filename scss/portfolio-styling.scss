@@ -9,7 +9,7 @@
 $primary-font: 'Helvetica', sans-serif;
 $secondary-font: 'Karla';
 $label-font: 'Sarabun', sans-serif;
-$body-color: #0c1717;
+$body-color: #0c171f;
 $primary-color: #1e8dd1;
 $secondary-color: #4DA8DA;
 $darkened-color: #161718;
@@ -311,12 +311,12 @@ h1, h2
 
 #clientsSection
 {
-    background: $secondary-color;
-    /*margin: 10% 0;*/
+    // background: $secondary-color;
+    // margin: 10% 0;
 
     .section-header
     { 
-        color: $white-text; 
+        //color: $white-text; 
         margin-bottom: 2rem;
     }
 }

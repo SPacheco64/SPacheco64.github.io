@@ -353,6 +353,8 @@ h1, h2 {
 
 #clientsSection {
   background: #4DA8DA;
+  border-top: 0.2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
 }
 
 #clientsSection .section-header {

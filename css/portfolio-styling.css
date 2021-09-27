@@ -351,6 +351,10 @@ h1, h2 {
   color: #4DA8DA;
 }
 
+#clientsSection {
+  background: #4DA8DA;
+}
+
 #clientsSection .section-header {
   margin-bottom: 2rem;
 }

@@ -312,6 +312,8 @@ h1, h2
 #clientsSection
 {
     background: $secondary-color;
+    border-top: .2rem solid $white-text;
+    border-bottom: .2rem solid $white-text;
     // margin: 10% 0;
 
     .section-header

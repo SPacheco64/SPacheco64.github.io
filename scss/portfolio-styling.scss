@@ -82,6 +82,10 @@ footer
     background-color: $white-text;
     margin: .5rem 0;
     transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
     border-radius: 3rem;
 }
 .hamburger.active .bar1 
@@ -164,6 +168,8 @@ nav /* Nested CSS for Navigation Items */
     padding: 0.5rem 1rem;
     display: inline-block;
     margin: 1rem 0;
+    font-size: 1rem;
+    text-align: center;
 }
 h1, h2
 { 
@@ -177,21 +183,7 @@ h1, h2
     position: relative;
     top: 5rem;
 }
-.resume-btn{ text-align: center; }
 .left-content, .right-content{ justify-content: center; }
-.coming-soon
-{
-    max-width: 20rem;
-    height: 20rem;
-    text-align: center;
-    padding: 3rem;
-    background: $secondary-color;
-    border-radius: 1rem;
-    text-transform: uppercase;
-    margin: 1.5rem auto;
-    align-items: center;
-    display: inline-flex;
-}
 .proj-row
 { 
     justify-content: space-between; 
@@ -199,40 +191,44 @@ h1, h2
     .proj-one, .proj-two, .proj-three, .proj-four
     {
         background-repeat: no-repeat;
-        background-size: 100% 100%;
         border-radius: 1rem;
         min-height: 20rem;
         width: 20rem;
         overflow: hidden;
         margin: 1rem auto;
+        border: .2rem solid $white-text;
+        max-width: 50rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
     }
     .proj-one
     { 
-        background-image: url(../images/gif/teenie-robo-screen.gif);
-        background-size: 85%;
+        background-image: url(../images/gif/exalted-dawn-test.gif);
         background-position: center;
-        background-color: #bab6b3;
+        background-color: $secondary-color;
+        background-size: cover; 
     }
     .proj-two
     { 
-        background-image: url(../images/png/portfolio-web-screen.PNG); 
-        background-size: 85%;
+        background-image: url(../images/gif/teenie-robo-screen.gif); 
         background-position: center;
-        background-color: $primary-color;
+        background-color: #bab6b3;
+        background-size: contain;
     }
     .proj-three
     { 
-        background-image: url(../images/gif/mario.gif);
-        background-size: 70%;
+        background-image: url(../images/png/portfolio-web-screen.png);
         background-position: center;
-        background-color: #000;
+        background-color: $primary-color;
+        background-size: cover;
     }
     .proj-four
     { 
-        background-image: url(../images/png/teenie-robo-screen.PNG);
-        background-size: 70%;
-        background-position: center;
-        background-color: #bab6b3;
+        background: $secondary-color;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        text-align: center;
+        caret-color: transparent;
+        user-select: none;
     }
 }
 #projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour
@@ -248,26 +244,40 @@ h1, h2
 #overlayOne, #overlayTwo, #overlayThree, #overlayFour 
 {
     opacity: 0;
-    display: none;
+    visibility: hidden;
     margin: 0 auto;
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
     background-color: $overlay-color;
     left: 0;
     text-align: center;
     padding: 5%;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 
     &.active 
     {
         opacity: 1;
-        display: block;   
+        visibility: visible;   
     }
 
-    h2 { color: $white-text; text-transform: uppercase; }
-    p { font-size: 1rem; }
+    h2 
+    { 
+        color: $white-text; 
+        text-transform: uppercase; 
+        font-size: 1.5rem;
+    }
+    p 
+    { 
+        font-size: .8rem;
+        max-width: 30rem;
+        margin: 0 auto;
+        margin-bottom: .8rem; 
+    }
     .tool
     {
         background-color: #1e8dd1;
@@ -275,7 +285,7 @@ h1, h2
         border-radius: 1rem;
         margin-bottom: 3%;
         margin-right: 1%;
-        width: 20%;
+        max-width: fit-content;
         display: inline-table;
         font-size: .8rem;
         text-align: center;
@@ -283,13 +293,13 @@ h1, h2
 
     .project-links
     {
-        margin-top: 1rem;
+        margin-top: .8rem;
         .project-btn
         {
             background-color: #0c1717;
             padding: 1rem;
-            border-radius: 5rem;
-            font-size: 1rem;
+            border-radius: 30rem;
+            font-size: .8rem;
 
             &:hover{ background-color: $white-text; }
         }
@@ -315,11 +325,14 @@ h1, h2
     border-top: .2rem solid $white-text;
     border-bottom: .2rem solid $white-text;
     // margin: 10% 0;
-
     .section-header
     { 
         color: $white-text; 
         margin-bottom: 2rem;
+    }
+    .d-flex
+    {
+        max-width: 25rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
     }
 }
 .company-logo
@@ -327,7 +340,7 @@ h1, h2
     width: 100%; 
     margin-bottom: 1rem; 
     background: $primary-color;
-    border-radius: 5rem;
+    border-radius: 30rem;
     padding: 1rem;
     border: .2rem solid $off-white;
 }
@@ -469,18 +482,19 @@ h1, h2
 @media (min-width: 768px) /* Breakpoint for Medium Devices and up */
 {
     .company-logo{ width: 75%; }
-    .about-img{ max-width: 75%; margin: 0; }
+    .about-img{ max-width: 60%; margin: 0; }
     .left-content{ justify-content: flex-start; }
     .right-content{ justify-content: flex-end; }
     #pageContent { text-align: left; }
+    .resume-btn{ font-size: inherit; }
 
-    #contactAnch, #aboutAnch, #projectsAnch { top: -2rem; }
+    #contactAnch, #aboutAnch, #projectsAnch { top: -1rem; }
     .proj-row
     {
-        .proj-one, .proj-two
+        margin-bottom: 3%;
+        .proj-one, .proj-two, .proj-three, .proj-four
         {
-            margin: 0;
-            background-size: 65%;
+            margin-bottom: 0;
         }
         .col-md-6
         {   
@@ -490,12 +504,6 @@ h1, h2
             max-width: 47.5%;
         }
     }
-    #overlayOne, #overlayTwo, #overlayThree, #overlayFour
-    {
-        h2{ font-size: 2rem; }
-        p, .project-btn{ font-size: 1rem; margin-bottom: .5rem; }
-    }
-    .coming-soon{ max-width: 100%; height: auto; display: block; }
 }
 @media (min-width: 992px) /* Breakpoint for Large Devices and up */
 {
@@ -518,10 +526,9 @@ h1, h2
     #screenOverlay, #screenOverlay.active{ display: none; }
     #pageContent{ top: 2rem; }
     .company-logo{ margin-bottom: 0; }
-    .coming-soon{ width: 100%; }
     .proj-row
     {
-        margin-bottom: 3%;
+        margin-bottom: 2%;
         .proj-one, .proj-two
         {
             min-height: 21rem;
@@ -533,9 +540,9 @@ h1, h2
 
     #overlayOne, #overlayTwo, #overlayThree, #overlayFour
     {
-        p, .tool, .project-btn{ font-size: 1.2rem; }
+        h2{ font-size: 2rem; }
+        p, .project-links .project-btn{ margin-bottom: 1rem; }
     }
-    .coming-soon{ margin: 0; }
 
     .submit-container, .socialIcons{ text-align: left; }
 
@@ -566,8 +573,8 @@ h1, h2
     #overlayOne, #overlayTwo, #overlayThree, #overlayFour
     {
         padding: 3.5%;
-        h2{ font-size: 2.5rem; }
+        h2{ font-size: 2rem; }
         .project-links{ margin-top: .5rem; }
-        p, .project-btn{ margin-bottom: 1rem; }
+        p, .tool, .project-links .project-btn{ font-size: 1rem; margin-bottom: 1rem; }
     }
 }

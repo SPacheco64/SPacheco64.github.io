@@ -81,6 +81,10 @@ footer a i {
   background-color: #fff;
   margin: .5rem 0;
   transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
   border-radius: 3rem;
 }
 
@@ -184,6 +188,8 @@ nav a {
   padding: 0.5rem 1rem;
   display: inline-block;
   margin: 1rem 0;
+  font-size: 1rem;
+  text-align: center;
 }
 
 h1, h2 {
@@ -207,25 +213,8 @@ h1, h2 {
   top: 5rem;
 }
 
-.resume-btn {
-  text-align: center;
-}
-
 .left-content, .right-content {
   justify-content: center;
-}
-
-.coming-soon {
-  max-width: 20rem;
-  height: 20rem;
-  text-align: center;
-  padding: 3rem;
-  background: #4DA8DA;
-  border-radius: 1rem;
-  text-transform: uppercase;
-  margin: 1.5rem auto;
-  align-items: center;
-  display: inline-flex;
 }
 
 .proj-row {
@@ -234,40 +223,44 @@ h1, h2 {
 
 .proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four {
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   border-radius: 1rem;
   min-height: 20rem;
   width: 20rem;
   overflow: hidden;
   margin: 1rem auto;
+  border: 0.2rem solid #fff;
+  max-width: 50rem !important;
 }
 
 .proj-row .proj-one {
-  background-image: url(../images/gif/teenie-robo-screen.gif);
-  background-size: 85%;
+  background-image: url(../images/gif/exalted-dawn-test.gif);
   background-position: center;
-  background-color: #bab6b3;
+  background-color: #4DA8DA;
+  background-size: cover;
 }
 
 .proj-row .proj-two {
-  background-image: url(../images/png/portfolio-web-screen.PNG);
-  background-size: 85%;
+  background-image: url(../images/gif/teenie-robo-screen.gif);
   background-position: center;
-  background-color: #1e8dd1;
+  background-color: #bab6b3;
+  background-size: contain;
 }
 
 .proj-row .proj-three {
-  background-image: url(../images/gif/mario.gif);
-  background-size: 70%;
+  background-image: url(../images/png/portfolio-web-screen.png);
   background-position: center;
-  background-color: #000;
+  background-color: #1e8dd1;
+  background-size: cover;
 }
 
 .proj-row .proj-four {
-  background-image: url(../images/png/teenie-robo-screen.PNG);
-  background-size: 70%;
-  background-position: center;
-  background-color: #bab6b3;
+  background: #4DA8DA;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  text-align: center;
+  caret-color: transparent;
+  user-select: none;
 }
 
 #projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour {
@@ -282,31 +275,38 @@ h1, h2 {
 
 #overlayOne, #overlayTwo, #overlayThree, #overlayFour {
   opacity: 0;
-  display: none;
+  visibility: hidden;
   margin: 0 auto;
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
   background-color: rgba(0, 0, 0, 0.8);
   left: 0;
   text-align: center;
   padding: 5%;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  -ms-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 #overlayOne.active, #overlayTwo.active, #overlayThree.active, #overlayFour.active {
   opacity: 1;
-  display: block;
+  visibility: visible;
 }
 
 #overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
   color: #fff;
   text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
 #overlayOne p, #overlayTwo p, #overlayThree p, #overlayFour p {
-  font-size: 1rem;
+  font-size: .8rem;
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: .8rem;
 }
 
 #overlayOne .tool, #overlayTwo .tool, #overlayThree .tool, #overlayFour .tool {
@@ -315,21 +315,21 @@ h1, h2 {
   border-radius: 1rem;
   margin-bottom: 3%;
   margin-right: 1%;
-  width: 20%;
+  max-width: fit-content;
   display: inline-table;
   font-size: .8rem;
   text-align: center;
 }
 
 #overlayOne .project-links, #overlayTwo .project-links, #overlayThree .project-links, #overlayFour .project-links {
-  margin-top: 1rem;
+  margin-top: .8rem;
 }
 
 #overlayOne .project-links .project-btn, #overlayTwo .project-links .project-btn, #overlayThree .project-links .project-btn, #overlayFour .project-links .project-btn {
   background-color: #0c1717;
   padding: 1rem;
-  border-radius: 5rem;
-  font-size: 1rem;
+  border-radius: 30rem;
+  font-size: .8rem;
 }
 
 #overlayOne .project-links .project-btn:hover, #overlayTwo .project-links .project-btn:hover, #overlayThree .project-links .project-btn:hover, #overlayFour .project-links .project-btn:hover {
@@ -361,11 +361,15 @@ h1, h2 {
   margin-bottom: 2rem;
 }
 
+#clientsSection .d-flex {
+  max-width: 25rem !important;
+}
+
 .company-logo {
   width: 100%;
   margin-bottom: 1rem;
   background: #1e8dd1;
-  border-radius: 5rem;
+  border-radius: 30rem;
   padding: 1rem;
   border: 0.2rem solid #F5F5EE;
 }
@@ -518,7 +522,7 @@ h1, h2 {
     width: 75%;
   }
   .about-img {
-    max-width: 75%;
+    max-width: 60%;
     margin: 0;
   }
   .left-content {
@@ -530,30 +534,23 @@ h1, h2 {
   #pageContent {
     text-align: left;
   }
-  #contactAnch, #aboutAnch, #projectsAnch {
-    top: -2rem;
+  .resume-btn {
+    font-size: inherit;
   }
-  .proj-row .proj-one, .proj-row .proj-two {
-    margin: 0;
-    background-size: 65%;
+  #contactAnch, #aboutAnch, #projectsAnch {
+    top: -1rem;
+  }
+  .proj-row {
+    margin-bottom: 3%;
+  }
+  .proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four {
+    margin-bottom: 0;
   }
   .proj-row .col-md-6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 47.5%;
     flex: 0 0 47.5%;
     max-width: 47.5%;
-  }
-  #overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
-    font-size: 2rem;
-  }
-  #overlayOne p, #overlayOne .project-btn, #overlayTwo p, #overlayTwo .project-btn, #overlayThree p, #overlayThree .project-btn, #overlayFour p, #overlayFour .project-btn {
-    font-size: 1rem;
-    margin-bottom: .5rem;
-  }
-  .coming-soon {
-    max-width: 100%;
-    height: auto;
-    display: block;
   }
 }
 
@@ -593,11 +590,8 @@ h1, h2 {
   .company-logo {
     margin-bottom: 0;
   }
-  .coming-soon {
-    width: 100%;
-  }
   .proj-row {
-    margin-bottom: 3%;
+    margin-bottom: 2%;
   }
   .proj-row .proj-one, .proj-row .proj-two {
     min-height: 21rem;
@@ -609,11 +603,11 @@ h1, h2 {
   .w-100 {
     display: none;
   }
-  #overlayOne p, #overlayOne .tool, #overlayOne .project-btn, #overlayTwo p, #overlayTwo .tool, #overlayTwo .project-btn, #overlayThree p, #overlayThree .tool, #overlayThree .project-btn, #overlayFour p, #overlayFour .tool, #overlayFour .project-btn {
-    font-size: 1.2rem;
+  #overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
+    font-size: 2rem;
   }
-  .coming-soon {
-    margin: 0;
+  #overlayOne p, #overlayOne .project-links .project-btn, #overlayTwo p, #overlayTwo .project-links .project-btn, #overlayThree p, #overlayThree .project-links .project-btn, #overlayFour p, #overlayFour .project-links .project-btn {
+    margin-bottom: 1rem;
   }
   .submit-container, .socialIcons {
     text-align: left;
@@ -642,12 +636,13 @@ h1, h2 {
     padding: 3.5%;
   }
   #overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   #overlayOne .project-links, #overlayTwo .project-links, #overlayThree .project-links, #overlayFour .project-links {
     margin-top: .5rem;
   }
-  #overlayOne p, #overlayOne .project-btn, #overlayTwo p, #overlayTwo .project-btn, #overlayThree p, #overlayThree .project-btn, #overlayFour p, #overlayFour .project-btn {
+  #overlayOne p, #overlayOne .tool, #overlayOne .project-links .project-btn, #overlayTwo p, #overlayTwo .tool, #overlayTwo .project-links .project-btn, #overlayThree p, #overlayThree .tool, #overlayThree .project-links .project-btn, #overlayFour p, #overlayFour .tool, #overlayFour .project-links .project-btn {
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
 }

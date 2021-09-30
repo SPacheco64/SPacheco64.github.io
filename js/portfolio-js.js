@@ -35,6 +35,14 @@ $(".close-overlay-two").click(function ()
 {
     $(document.getElementById("overlayTwo")).toggleClass("active");
 });
+$(document.getElementById("projContainerThree")).click(function () 
+{
+    $(document.getElementById("overlayThree")).toggleClass("active");
+});
+$(".close-overlay-three").click(function () 
+{
+    $(document.getElementById("overlayThree")).toggleClass("active");
+});
 
 // Initialization for the AOS CSS Animations
 AOS.init

@@ -3,6 +3,22 @@
 // Swaps between Hamburger Icon to 'X' and displays the dropdown menu
 $(document).ready(function () 
 {
+    // Preloads the images for smoother page loading
+    if (document.images) 
+    {
+        var img = [];
+        for (let i=0; i < characterCount; i++)
+        {
+            img[i] = new Image();
+        }
+
+        img[0].src = "images/jpg/me-1.jpg"; // Me @ top
+        img[1].src = "images/gif/exalted-dawn-test.gif"; // Exalted_Dawn gif
+        img[2].src = "images/gif/teenie-robo-screen.gif"; // Teenie-Robo gif
+        img[3].src = "images/png/portfolio-web-screen.png"; // Portfolio Site png
+        img[4].src = "images/jpg/me-4.jpg"; // Me @ about
+    }
+
     const pageBody = document.body;
     const screenOverlay = document.getElementById("screenOverlay");
 

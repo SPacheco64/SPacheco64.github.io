@@ -12,13 +12,11 @@ $(document).ready(function ()
         img[1] = new Image();
         img[2] = new Image();
         img[3] = new Image();
-        img[4] = new Image();
 
         img[0].src = "images/jpg/me-1.jpg"; // Me @ top
-        img[1].src = "images/gif/exalted-dawn-test.gif"; // Exalted_Dawn gif
-        img[2].src = "images/gif/teenie-robo-screen.gif"; // Teenie-Robo gif
-        img[3].src = "images/png/portfolio-web-screen.png"; // Portfolio Site png
-        img[4].src = "images/jpg/me-4.jpg"; // Me @ about
+        img[1].src = "images/gif/teenie-robo-screen.gif"; // Teenie-Robo gif
+        img[2].src = "images/png/portfolio-web-screen.png"; // Portfolio Site png
+        img[3].src = "images/jpg/me-4.jpg"; // Me @ about
     }
 
     const pageBody = document.body;

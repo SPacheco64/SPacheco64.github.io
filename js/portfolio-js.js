@@ -7,10 +7,12 @@ $(document).ready(function ()
     if (document.images) 
     {
         var img = [];
-        for (let i=0; i < characterCount; i++)
-        {
-            img[i] = new Image();
-        }
+
+        img[0] = new Image();
+        img[1] = new Image();
+        img[2] = new Image();
+        img[3] = new Image();
+        img[4] = new Image();
 
         img[0].src = "images/jpg/me-1.jpg"; // Me @ top
         img[1].src = "images/gif/exalted-dawn-test.gif"; // Exalted_Dawn gif

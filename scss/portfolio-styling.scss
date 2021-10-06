@@ -199,34 +199,35 @@ h1, h2
         border: .2rem solid $white-text;
         max-width: 50rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
     }
+    .video-container 
+    {
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        video
+        {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            z-index: 0;
+        }
+    }
     .proj-one
     { 
         //background-image: url(../images/gif/exalted-dawn-test.gif);
         padding: 0;
-        
-        .video-container 
-        {
-            height: 100%;
-            width: 100%;
-            position: relative;
-    
-            video
-            {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                object-fit: cover;
-                z-index: 0;
-            }
-        }
     }
-
     .proj-two
     { 
-        background-image: url(../images/gif/teenie-robo-screen.gif); 
-        background-position: center;
+        // background-image: url(../images/gif/teenie-robo-screen.gif); 
         background-color: #bab6b3;
-        background-size: contain;
+        .video-container 
+        {
+            video{ object-fit: contain; }
+        }
+
     }
     .proj-three
     { 

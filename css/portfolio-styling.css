@@ -54,15 +54,15 @@ header a {
 footer {
   background: #1e8dd1;
   color: #fff;
-  position: static;
+  position: relative;
   width: 100%;
   bottom: 0;
   left: 0;
-  z-index: 300;
+  z-index: 0;
   text-align: center;
   padding: 2rem 0;
   min-height: 5rem;
-  margin-top: 5rem;
+  margin-top: 4.5rem;
 }
 
 footer a {
@@ -70,7 +70,7 @@ footer a {
 }
 
 footer a i {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   padding: 0 1rem;
 }
 
@@ -125,6 +125,14 @@ footer a i {
   top: 5rem;
   background: #1e8dd1;
   left: 0px;
+  padding: 1rem 0;
+}
+
+#mobileNav a {
+  width: 13rem;
+  border: .2rem solid;
+  border-radius: 30rem;
+  margin: 1rem auto;
 }
 
 .no-scroll {
@@ -132,11 +140,6 @@ footer a i {
 }
 
 /* Header Nav CSS - END */
-nav .nav-item {
-  width: 10rem;
-  margin: 0 auto;
-}
-
 nav a {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -144,10 +147,10 @@ nav a {
 
 #screenOverlay {
   display: none;
-  background: rgba(0, 0, 0, 0.7);
+  background: #1e8dd1;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 200;

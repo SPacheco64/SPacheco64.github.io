@@ -7,7 +7,7 @@ This is an informational responsive webpage created to be my portfolio website.
 Tech Used: 
 - HTML5
 - SCSS 
-- Bootstrap 4 
+- Bootstrap 4.6 
 - JavaScript 
 - jQuery
 - PHP

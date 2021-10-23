@@ -483,13 +483,12 @@ h1, h2
     cursor: pointer;
     i
     {
-        font-size: 3rem;
-        border: .1rem solid $white-text;
+        font-size: 2rem;
+        color: $white-text;
+        background-color: $primary-color;
+        padding: .45rem .6rem;
         border-radius: 100%;
-        color: $primary-color;
-        background-color: $white-text;
-        padding-right: .01rem;
-        padding-top: .01rem;
+        border: 0.1rem solid $white-text;
     }
 }
 

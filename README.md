@@ -7,11 +7,11 @@ This is an informational responsive webpage created to be my portfolio website.
 Tech Used: 
 - HTML5
 - SCSS 
-- Bootstrap 4.6 
+- Bootstrap
 - JavaScript 
 - jQuery
 - PHP
-- Animations
+- CSS Animations
 
 Site Breakdown:
 - Responsive header containing anchor tags that lead users to the three main sections on the page: Personal Projects; About Me; Contact Form

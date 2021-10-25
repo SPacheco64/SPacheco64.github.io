@@ -125,7 +125,10 @@ footer a i {
   top: 5rem;
   background: #1e8dd1;
   left: 0px;
-  padding: 1rem 0;
+}
+
+#mobileNav .nav-item:first-child {
+  padding-top: 1rem;
 }
 
 #mobileNav a {
@@ -133,6 +136,15 @@ footer a i {
   border: .2rem solid;
   border-radius: 30rem;
   margin: 1rem auto;
+}
+
+#mobileNav .social-line {
+  margin: 1rem 0;
+}
+
+#mobileNav .social-line span a {
+  border: none;
+  margin: 0 .5rem;
 }
 
 .no-scroll {

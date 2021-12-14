@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: "Karla";
-  background: #0c171f;
+  background: #030e12;
   font-size: 1.2rem;
   color: #fff;
 }
@@ -29,16 +29,16 @@ body img, body button, body .anchor {
 }
 
 a {
-  color: #1e8dd1;
+  color: #007FD9;
 }
 
 a:hover {
-  color: #4DA8DA;
+  color: #38acff;
   text-decoration: none;
 }
 
 header {
-  background: #1e8dd1;
+  background: #007FD9;
   position: fixed;
   width: 100%;
   top: 0;
@@ -52,7 +52,7 @@ header a {
 }
 
 footer {
-  background: #1e8dd1;
+  background: #007FD9;
   color: #fff;
   position: relative;
   width: 100%;
@@ -123,7 +123,7 @@ footer a i {
   width: 100%;
   text-align: center;
   top: 5rem;
-  background: #1e8dd1;
+  background: #007FD9;
   left: 0px;
 }
 
@@ -153,13 +153,13 @@ footer a i {
 
 /* Header Nav CSS - END */
 nav a {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 #screenOverlay {
   display: none;
-  background: #1e8dd1;
+  background: #007FD9;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -191,7 +191,7 @@ nav a {
 }
 
 .welcome-img {
-  background: #1e8dd1;
+  background: #007FD9;
   border-radius: 30rem;
   max-width: 15rem;
 }
@@ -208,7 +208,7 @@ nav a {
 }
 
 h1, h2 {
-  color: #1e8dd1;
+  color: #007FD9;
   font-weight: bold;
 }
 
@@ -276,12 +276,12 @@ h1, h2 {
 .proj-row .proj-three {
   background-image: url(../images/png/portfolio-web-screen.png);
   background-position: center;
-  background-color: #1e8dd1;
+  background-color: #007FD9;
   background-size: cover;
 }
 
 .proj-row .proj-four {
-  background: #4DA8DA;
+  background: #38acff;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
@@ -353,7 +353,7 @@ h1, h2 {
 }
 
 #overlayOne .project-links .project-btn, #overlayTwo .project-links .project-btn, #overlayThree .project-links .project-btn, #overlayFour .project-links .project-btn {
-  background-color: #0c171f;
+  background-color: #030e12;
   padding: 1rem;
   border-radius: 30rem;
   font-size: .8rem;
@@ -374,11 +374,11 @@ h1, h2 {
 }
 
 #overlayOne .close-overlay-one:hover, #overlayOne .close-overlay-two:hover, #overlayOne .close-overlay-three:hover, #overlayOne .close-overlay-four:hover, #overlayTwo .close-overlay-one:hover, #overlayTwo .close-overlay-two:hover, #overlayTwo .close-overlay-three:hover, #overlayTwo .close-overlay-four:hover, #overlayThree .close-overlay-one:hover, #overlayThree .close-overlay-two:hover, #overlayThree .close-overlay-three:hover, #overlayThree .close-overlay-four:hover, #overlayFour .close-overlay-one:hover, #overlayFour .close-overlay-two:hover, #overlayFour .close-overlay-three:hover, #overlayFour .close-overlay-four:hover {
-  color: #4DA8DA;
+  color: #38acff;
 }
 
 #clientsSection {
-  background: #4DA8DA;
+  background: #38acff;
   border-top: 0.2rem solid #fff;
   border-bottom: 0.2rem solid #fff;
 }
@@ -395,7 +395,7 @@ h1, h2 {
 .company-logo {
   width: 100%;
   margin-bottom: 1rem;
-  background: #1e8dd1;
+  background: #007FD9;
   border-radius: 30rem;
   padding: 1rem;
   border: 0.2rem solid #F5F5EE;
@@ -439,7 +439,7 @@ h1, h2 {
 
 /* STYLING FOR CONTACT FORM - START */
 #contactSection {
-  background: #4DA8DA;
+  background: #38acff;
 }
 
 .visuallyHidden:not(:focus):not(:active) {
@@ -459,7 +459,7 @@ h1, h2 {
 .contact .contactContainer .contactForm input, .contact .contactContainer .contactForm textarea {
   padding: .4rem;
   margin: 1rem 0;
-  border: 0.2rem solid #1e8dd1;
+  border: 0.2rem solid #007FD9;
   border-radius: .2rem;
   outline: none;
 }
@@ -488,8 +488,8 @@ h1, h2 {
 }
 
 .contact .contactContainer .contactForm button {
-  background-color: #1e8dd1;
-  border: 0.2rem solid #1e8dd1;
+  background-color: #007FD9;
+  border: 0.2rem solid #007FD9;
   padding: 1rem 1.5rem;
   margin: 1rem 0;
   width: auto;
@@ -501,7 +501,7 @@ h1, h2 {
 
 .contact .contactContainer .contactForm button:hover {
   background: #fff;
-  color: #1e8dd1;
+  color: #007FD9;
   cursor: pointer;
 }
 
@@ -531,7 +531,7 @@ h1, h2 {
 #scrollToTopBtn i {
   font-size: 2rem;
   color: #fff;
-  background-color: #1e8dd1;
+  background-color: #007FD9;
   padding: .45rem .6rem;
   border-radius: 100%;
   border: 0.1rem solid #fff;
@@ -583,11 +583,11 @@ h1, h2 {
 @media (min-width: 992px) {
   header {
     position: fixed;
-    background: #0c171f;
+    background: #030e12;
   }
   footer {
     position: static;
-    background: #0c171f;
+    background: #030e12;
   }
   /* Header Nav CSS - START */
   .hamburger, #mobileNav {

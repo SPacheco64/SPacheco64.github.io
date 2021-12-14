@@ -350,6 +350,8 @@ h1, h2 {
 
 #overlayOne .project-links, #overlayTwo .project-links, #overlayThree .project-links, #overlayFour .project-links {
   margin-top: .8rem;
+  display: flex;
+  justify-content: center;
 }
 
 #overlayOne .project-links .project-btn, #overlayTwo .project-links .project-btn, #overlayThree .project-links .project-btn, #overlayFour .project-links .project-btn {
@@ -357,10 +359,15 @@ h1, h2 {
   padding: 1rem;
   border-radius: 30rem;
   font-size: .8rem;
+  border: 0.1rem solid #fff;
+  display: block;
+  min-width: 7rem;
+  margin: 0 0.5rem;
 }
 
 #overlayOne .project-links .project-btn:hover, #overlayTwo .project-links .project-btn:hover, #overlayThree .project-links .project-btn:hover, #overlayFour .project-links .project-btn:hover {
   background-color: #fff;
+  font-weight: bold;
 }
 
 #overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four {
@@ -634,6 +641,9 @@ h1, h2 {
   }
   #overlayOne p, #overlayOne .project-links .project-btn, #overlayTwo p, #overlayTwo .project-links .project-btn, #overlayThree p, #overlayThree .project-links .project-btn, #overlayFour p, #overlayFour .project-links .project-btn {
     margin-bottom: 1rem;
+  }
+  #overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four {
+    font-size: 1.75rem;
   }
   .submit-container, .socialIcons {
     text-align: left;

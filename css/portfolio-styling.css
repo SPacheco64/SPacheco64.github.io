@@ -28,17 +28,17 @@ body img, body button, body .anchor {
   caret-color: transparent;
 }
 
-a {
+body a {
   color: #007FD9;
-}
-
-a:hover {
-  color: #38acff;
   text-decoration: none;
 }
 
+body a:hover, body a:focus, body a:active {
+  color: #38acff;
+}
+
 header {
-  background: #007FD9;
+  background: #030e12;
   position: fixed;
   width: 100%;
   top: 0;
@@ -47,12 +47,15 @@ header {
   height: 5rem;
 }
 
-header a {
+header a, header .nav-link {
   color: #fff;
 }
 
+header a:hover, header a:focus, header a:active, header .nav-link:hover, header .nav-link:focus, header .nav-link:active {
+  color: #38acff;
+}
+
 footer {
-  background: #007FD9;
   color: #fff;
   position: relative;
   width: 100%;
@@ -62,7 +65,7 @@ footer {
   text-align: center;
   padding: 2rem 0;
   min-height: 5rem;
-  margin-top: 4.5rem;
+  margin-top: 5.5rem;
 }
 
 footer a {
@@ -103,15 +106,15 @@ footer a i {
   transform: rotate(45deg) translate(-0.7rem, -0.7rem);
 }
 
-.hamburger:focus {
+.navbar-toggler:focus {
   outline: none;
+  box-shadow: none;
 }
 
 /* Hamburger Menu Styling - END */
 /* Header Nav CSS - START */
 #siteLogo {
-  max-height: 4rem;
-  border-radius: 1rem;
+  max-height: 5rem;
 }
 
 #desktopNav {
@@ -123,7 +126,7 @@ footer a i {
   width: 100%;
   text-align: center;
   top: 5rem;
-  background: #007FD9;
+  background: #030e12;
   left: 0px;
 }
 
@@ -136,6 +139,7 @@ footer a i {
   border: .2rem solid;
   border-radius: 30rem;
   margin: 1rem auto;
+  font-size: 1.5rem;
 }
 
 #mobileNav .social-line {
@@ -144,7 +148,8 @@ footer a i {
 
 #mobileNav .social-line span a {
   border: none;
-  margin: 0 .5rem;
+  margin: 0 0.75rem;
+  font-size: 2rem;
 }
 
 .no-scroll {
@@ -152,14 +157,13 @@ footer a i {
 }
 
 /* Header Nav CSS - END */
-nav a {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.navbar {
+  padding-top: 0;
 }
 
 #screenOverlay {
   display: none;
-  background: #007FD9;
+  background: #030e12;
   height: 100%;
   width: 100%;
   position: fixed;
@@ -177,34 +181,38 @@ nav a {
   top: -5rem;
 }
 
+#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection {
+  padding: 5% 10%;
+}
+
 #welcomeSection {
   min-height: 90vh;
   display: flex;
 }
 
-#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection {
-  padding: 5% 10%;
-}
-
-.welcome-text {
+#welcomeSection .welcome-text {
   width: 90%;
 }
 
-.welcome-img {
-  background: #007FD9;
-  border-radius: 30rem;
-  max-width: 15rem;
+#welcomeSection .welcome-text h1 {
+  font-size: 2rem;
 }
 
-.resume-btn {
+#welcomeSection .welcome-text .resume-btn {
   caret-color: transparent;
   border: .2rem solid;
   border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  display: inline-block;
+  padding: 0.5rem;
+  display: block;
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.25rem;
   text-align: center;
+}
+
+#welcomeSection .welcome-img {
+  background: #007FD9;
+  border-radius: 30rem;
+  max-width: 15rem;
 }
 
 h1, h2 {
@@ -247,13 +255,13 @@ h1, h2 {
   max-width: 50rem !important;
 }
 
-.proj-row .video-container {
+.proj-row .proj-one .video-container, .proj-row .proj-two .video-container, .proj-row .proj-three .video-container, .proj-row .proj-four .video-container {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-.proj-row .video-container video {
+.proj-row .proj-one .video-container video, .proj-row .proj-two .video-container video, .proj-row .proj-three .video-container video, .proj-row .proj-four .video-container video {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -323,49 +331,60 @@ h1, h2 {
   visibility: visible;
 }
 
-#overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
+#overlayOne .details-container, #overlayTwo .details-container, #overlayThree .details-container, #overlayFour .details-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  height: fit-content;
+  display: block;
+  width: 90%;
+}
+
+#overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2 {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
 
-#overlayOne p, #overlayTwo p, #overlayThree p, #overlayFour p {
+#overlayOne .details-container p, #overlayTwo .details-container p, #overlayThree .details-container p, #overlayFour .details-container p {
   font-size: .8rem;
   max-width: 30rem;
   margin: 0 auto;
   margin-bottom: .8rem;
 }
 
-#overlayOne .tool, #overlayTwo .tool, #overlayThree .tool, #overlayFour .tool {
-  background-color: #1e8dd1;
+#overlayOne .details-container .tool, #overlayTwo .details-container .tool, #overlayThree .details-container .tool, #overlayFour .details-container .tool {
+  background-color: #007FD9;
   padding: .5rem;
   border-radius: 1rem;
   margin-bottom: 3%;
   margin-right: 1%;
-  max-width: fit-content;
+  min-width: 4rem;
   display: inline-table;
   font-size: .8rem;
   text-align: center;
 }
 
-#overlayOne .project-links, #overlayTwo .project-links, #overlayThree .project-links, #overlayFour .project-links {
+#overlayOne .details-container .project-links, #overlayTwo .details-container .project-links, #overlayThree .details-container .project-links, #overlayFour .details-container .project-links {
   margin-top: .8rem;
   display: flex;
   justify-content: center;
 }
 
-#overlayOne .project-links .project-btn, #overlayTwo .project-links .project-btn, #overlayThree .project-links .project-btn, #overlayFour .project-links .project-btn {
+#overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn {
   background-color: #030e12;
-  padding: 1rem;
+  padding: .75rem 1rem;
   border-radius: 30rem;
   font-size: .8rem;
   border: 0.1rem solid #fff;
   display: block;
   min-width: 7rem;
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
 }
 
-#overlayOne .project-links .project-btn:hover, #overlayTwo .project-links .project-btn:hover, #overlayThree .project-links .project-btn:hover, #overlayFour .project-links .project-btn:hover {
+#overlayOne .details-container .project-links .project-btn:hover, #overlayTwo .details-container .project-links .project-btn:hover, #overlayThree .details-container .project-links .project-btn:hover, #overlayFour .details-container .project-links .project-btn:hover {
   background-color: #fff;
   font-weight: bold;
 }
@@ -384,15 +403,9 @@ h1, h2 {
   color: #38acff;
 }
 
-#clientsSection {
-  background: #38acff;
-  border-top: 0.2rem solid #fff;
-  border-bottom: 0.2rem solid #fff;
-}
-
 #clientsSection .section-header {
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 #clientsSection .d-flex {
@@ -400,12 +413,20 @@ h1, h2 {
 }
 
 .company-logo {
-  width: 100%;
   margin-bottom: 1rem;
   background: #007FD9;
-  border-radius: 30rem;
-  padding: 1rem;
-  border: 0.2rem solid #F5F5EE;
+  border-radius: 10rem;
+  padding: 0.5rem 1.5rem;
+  width: 15rem;
+  min-height: 6rem;
+  align-items: center;
+  display: flex;
+}
+
+.company-logo img {
+  display: block;
+  max-width: 10rem;
+  max-height: 5rem;
 }
 
 .mini-icon {
@@ -427,7 +448,7 @@ h1, h2 {
 
 .toolkit-col i {
   font-size: 3rem;
-  color: #4DA8DA;
+  color: #38acff;
 }
 
 .toolkit-icon {
@@ -436,8 +457,6 @@ h1, h2 {
 }
 
 .toolkit-name {
-  position: absolute;
-  bottom: -1.5rem;
   font-family: "Sarabun", sans-serif;
   font-size: 1rem;
   min-width: 6rem;
@@ -551,9 +570,6 @@ h1, h2 {
 }
 
 @media (min-width: 768px) {
-  .company-logo {
-    width: 75%;
-  }
   .about-img {
     max-width: 60%;
     margin: 0;
@@ -567,8 +583,13 @@ h1, h2 {
   #pageContent {
     text-align: left;
   }
-  .resume-btn {
+  #welcomeSection .resume-btn {
     font-size: inherit;
+    padding: .5rem 1rem;
+    width: fit-content;
+  }
+  #welcomeSection h1 {
+    font-size: auto;
   }
   #contactAnch, #aboutAnch, #projectsAnch {
     top: -1rem;
@@ -595,10 +616,14 @@ h1, h2 {
   footer {
     position: static;
     background: #030e12;
+    margin-top: 2.5rem;
   }
   /* Header Nav CSS - START */
   .hamburger, #mobileNav {
     display: none;
+  }
+  #siteLogo {
+    max-height: 4rem;
   }
   #desktopNav {
     display: flex;
@@ -606,10 +631,13 @@ h1, h2 {
   .no-scroll {
     overflow: visible;
   }
-  nav .nav-item {
+  .navbar {
+    padding: .5rem 1.5rem;
+  }
+  .navbar .nav-item {
     width: auto;
   }
-  nav a {
+  .navbar a {
     font-size: 1.2rem;
     margin: 0 1rem;
   }
@@ -636,10 +664,10 @@ h1, h2 {
   .w-100 {
     display: none;
   }
-  #overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
+  #overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2 {
     font-size: 2rem;
   }
-  #overlayOne p, #overlayOne .project-links .project-btn, #overlayTwo p, #overlayTwo .project-links .project-btn, #overlayThree p, #overlayThree .project-links .project-btn, #overlayFour p, #overlayFour .project-links .project-btn {
+  #overlayOne .details-container p, #overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container p, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container p, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container p, #overlayFour .details-container .project-links .project-btn {
     margin-bottom: 1rem;
   }
   #overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four {
@@ -671,13 +699,13 @@ h1, h2 {
   #overlayOne, #overlayTwo, #overlayThree, #overlayFour {
     padding: 3.5%;
   }
-  #overlayOne h2, #overlayTwo h2, #overlayThree h2, #overlayFour h2 {
+  #overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2 {
     font-size: 2rem;
   }
-  #overlayOne .project-links, #overlayTwo .project-links, #overlayThree .project-links, #overlayFour .project-links {
+  #overlayOne .details-container .project-links, #overlayTwo .details-container .project-links, #overlayThree .details-container .project-links, #overlayFour .details-container .project-links {
     margin-top: .5rem;
   }
-  #overlayOne p, #overlayOne .tool, #overlayOne .project-links .project-btn, #overlayTwo p, #overlayTwo .tool, #overlayTwo .project-links .project-btn, #overlayThree p, #overlayThree .tool, #overlayThree .project-links .project-btn, #overlayFour p, #overlayFour .tool, #overlayFour .project-links .project-btn {
+  #overlayOne .details-container p, #overlayOne .details-container .tool, #overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container p, #overlayTwo .details-container .tool, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container p, #overlayThree .details-container .tool, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container p, #overlayFour .details-container .tool, #overlayFour .details-container .project-links .project-btn {
     font-size: 1rem;
     margin-bottom: 1rem;
   }

@@ -1,6 +1,6 @@
 <?php
 	$errors = "";
-	$myemail = "sergiomiguelpacheco64@gmail.com";
+	$myemail = "spacheco@sergio-pacheco.com";
 	
 	if(empty($_POST["name"]) || empty($_POST["email"]) || empty($_POST["message"]))
 	{
@@ -20,15 +20,11 @@
 	{
 		$to = $myemail;
 		$email_subject = "Portfolio Site Message From: $name";
-		$email_body = "$message\n\n".
-		
-		$headers = "From: $name\n";
-		
-		$headers .= "Reply to: $email";	
+		$email_body = "From: $name\n\n$message\n\nSender's Email: $email";
 
-		if(mail($to, $email_subject, $email_body, $headers))
+		if(mail($to, $email_subject, $email_body))
 		{
-			header('Location: thank-you.html');
+			header('Location: /thank-you');
 		} 
 		else
 		{

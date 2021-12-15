@@ -31,7 +31,7 @@ $overlay-color: rgba(0, 0, 0, 0.8);
 }
 
 html{ scroll-behavior: smooth; }
-body /* CSS for the page body */
+body // Universal styling for elements within the page's body
 {
     font-family: $secondary-font;
     background: $body-color;
@@ -39,26 +39,33 @@ body /* CSS for the page body */
     color: $white-text;
 
     img, button, .anchor{ caret-color: transparent; }
-}
 
-a { color: $primary-text; }
-a:hover { color: $secondary-text; text-decoration: none; }
+    a 
+    { 
+        color: $primary-text;
+        text-decoration: none; 
+        &:hover, &:focus, &:active { color: $secondary-text; }
+    }
+}
 
 header
 {
-    background: $primary-color;
+    background: $body-color;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 300;
     height: 5rem;
-    a { color: $white-text; }
+    a, .nav-link 
+    { 
+        color: $white-text; 
+        &:hover, &:focus, &:active { color: $secondary-text; }
+    }
 }
 
 footer
 {
-    background: $primary-color;
     color: $white-text;
     position: relative;
     width: 100%;
@@ -68,10 +75,13 @@ footer
     text-align: center;
     padding: 2rem 0;
     min-height: 5rem;
-    margin-top: 4.5rem;
+    margin-top: 5.5rem;
 
-    a { color: $white-text; }
-    a i { font-size: 1.75rem; padding: 0 1rem; }
+    a 
+    { 
+        color: $white-text; 
+        i{ font-size: 1.75rem; padding: 0 1rem; }
+    }
 }
 
 /* Hamburger Menu Styling - START */
@@ -100,15 +110,11 @@ footer
     -webkit-transform: rotate(45deg) translate(-0.7rem, -0.7rem);
     transform: rotate(45deg) translate(-0.7rem, -0.7rem);
 }
-.hamburger:focus{ outline: none; }
+.navbar-toggler:focus{ outline: none; box-shadow: none; }
 /* Hamburger Menu Styling - END */
 
 /* Header Nav CSS - START */
-#siteLogo
-{   
-    max-height: 4rem;
-    border-radius: 1rem;
-}
+#siteLogo{ max-height: 5rem; }
 #desktopNav{ display: none; }
 #mobileNav
 {
@@ -116,9 +122,8 @@ footer
     width: 100%;
     text-align: center;
     top: 5rem;
-    background: $primary-color;
+    background: $body-color;
     left: 0px;
-    //padding: 1rem 0;
 
     .nav-item:first-child
     {
@@ -131,6 +136,7 @@ footer
         border: .2rem solid;
         border-radius: 30rem;
         margin: 1rem auto;
+        font-size: 1.5rem
     }
 
     .social-line
@@ -141,7 +147,8 @@ footer
             a
             {
                 border: none;
-                margin: 0 .5rem;
+                margin: 0 0.75rem;
+                font-size: 2rem;
             }
         }
     }
@@ -149,20 +156,15 @@ footer
 .no-scroll{ overflow: hidden; }
 /* Header Nav CSS - END */
 
-nav /* Nested CSS for Navigation Items */ 
+.navbar // Styling for the navbar & navigation items
 {
-    a 
-    { 
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
+    padding-top: 0;
 }
 
 #screenOverlay
 { 
     display: none; 
-    //background: rgba(0, 0, 0, 0.7);
-    background: $primary-color;
+    background: $body-color;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -173,27 +175,37 @@ nav /* Nested CSS for Navigation Items */
 #screenOverlay.active{ display: block; }
 #contactAnch, #aboutAnch, #projectsAnch { position: relative; top: -5rem; }
 
-#welcomeSection{ min-height: 90vh; display: flex; }
-#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection{ padding: 5% 10%;}
-.welcome-text{ width: 90%; }
-.welcome-img
-{
-    background: $primary-text;
-    border-radius: 30rem;
-    //border: 0.2rem solid $primary-text;
-    max-width: 15rem;
+#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection{ padding: 5% 10%; }
+
+#welcomeSection
+{ 
+    min-height: 90vh; 
+    display: flex; 
+
+    .welcome-text
+    { 
+        width: 90%; 
+        h1{ font-size: 2rem; }
+        .resume-btn
+        {
+            caret-color: transparent;
+            border: .2rem solid;
+            border-radius: 1rem;
+            padding: 0.5rem;
+            display: block;
+            margin: 1rem 0;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+    }
+    .welcome-img
+    {
+        background: $primary-text;
+        border-radius: 30rem;
+        max-width: 15rem;
+    }
 }
-.resume-btn
-{
-    caret-color: transparent;
-    border: .2rem solid;
-    border-radius: 1rem;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    margin: 1rem 0;
-    font-size: 1rem;
-    text-align: center;
-}
+
 h1, h2
 { 
     color: $primary-text; 
@@ -221,20 +233,21 @@ h1, h2
         margin: 1rem auto;
         border: .2rem solid $white-text;
         max-width: 50rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
-    }
-    .video-container 
-    {
-        height: 100%;
-        width: 100%;
-        position: relative;
-
-        video
+    
+        .video-container 
         {
-            width: 100%;
             height: 100%;
-            position: absolute;
-            object-fit: cover;
-            z-index: 0;
+            width: 100%;
+            position: relative;
+    
+            video
+            {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                object-fit: cover;
+                z-index: 0;
+            }
         }
     }
     .proj-one
@@ -304,43 +317,60 @@ h1, h2
         visibility: visible;   
     }
 
-    h2 
-    { 
-        color: $white-text; 
-        text-transform: uppercase; 
-        font-size: 1.5rem;
-    }
-    p 
-    { 
-        font-size: .8rem;
-        max-width: 30rem;
-        margin: 0 auto;
-        margin-bottom: .8rem; 
-    }
-    .tool
+    .details-container
     {
-        background-color: #1e8dd1;
-        padding: .5rem;
-        border-radius: 1rem;
-        margin-bottom: 3%;
-        margin-right: 1%;
-        max-width: fit-content;
-        display: inline-table;
-        font-size: .8rem;
-        text-align: center;
-    }
-
-    .project-links
-    {
-        margin-top: .8rem;
-        .project-btn
-        {
-            background-color: $body-color;
-            padding: 1rem;
-            border-radius: 30rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        height: fit-content;
+        display: block;
+        width: 90%;
+        h2 
+        { 
+            color: $white-text; 
+            text-transform: uppercase; 
+            font-size: 1.5rem;
+        }
+        p 
+        { 
             font-size: .8rem;
-
-            &:hover{ background-color: $white-text; }
+            max-width: 30rem;
+            margin: 0 auto;
+            margin-bottom: .8rem; 
+        }
+        .tool
+        {
+            background-color: $primary-color;
+            padding: .5rem;
+            border-radius: 1rem;
+            margin-bottom: 3%;
+            margin-right: 1%;
+            min-width: 4rem;
+            display: inline-table;
+            font-size: .8rem;
+            text-align: center;
+        }
+        .project-links
+        {
+            margin-top: .8rem;
+            display: flex;
+            justify-content: center;
+    
+            .project-btn
+            {
+                background-color: $body-color;
+                padding: .75rem 1rem;
+                border-radius: 30rem;
+                font-size: .8rem;
+                border: 0.1rem solid $white-text;
+                display: block;
+                min-width: 7rem;
+                margin: 0 0.25rem;
+    
+                &:hover{ background-color: $white-text; font-weight: bold; }
+            }
         }
     }
 
@@ -360,14 +390,14 @@ h1, h2
 
 #clientsSection
 {
-    background: $secondary-color;
-    border-top: .2rem solid $white-text;
-    border-bottom: .2rem solid $white-text;
+    //background: $secondary-color;
+    //border-top: .2rem solid $white-text;
+    //border-bottom: .2rem solid $white-text;
     // margin: 10% 0;
     .section-header
     { 
         color: $white-text; 
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
     .d-flex
     {
@@ -376,12 +406,16 @@ h1, h2
 }
 .company-logo
 { 
-    width: 100%; 
     margin-bottom: 1rem; 
     background: $primary-color;
-    border-radius: 30rem;
-    padding: 1rem;
-    border: .2rem solid $off-white;
+    //border: .2rem solid $off-white;
+    border-radius: 10rem;
+    padding: 0.5rem 1.5rem;
+    width: 15rem;
+    min-height: 6rem;
+    align-items: center;
+    display: flex;
+    img{ display: block; max-width: 10rem; max-height: 5rem; }
 }
 .mini-icon
 {
@@ -402,7 +436,7 @@ h1, h2
     i
     {
         font-size: 3rem;
-        color: #4DA8DA;
+        color: $secondary-color;
     }
 }
 .toolkit-icon
@@ -412,8 +446,6 @@ h1, h2
 }
 .toolkit-name
 {
-    position: absolute;
-    bottom: -1.5rem;
     font-family: $label-font;
     font-size: 1rem;
     min-width: 6rem;
@@ -519,12 +551,17 @@ h1, h2
 }
 @media (min-width: 768px) /* Breakpoint for Medium Devices and up */
 {
-    .company-logo{ width: 75%; }
+    //.company-logo{ width: 75%; }
     .about-img{ max-width: 60%; margin: 0; }
     .left-content{ justify-content: flex-start; }
     .right-content{ justify-content: flex-end; }
     #pageContent { text-align: left; }
-    .resume-btn{ font-size: inherit; }
+
+    #welcomeSection
+    { 
+        .resume-btn{ font-size: inherit; padding: .5rem 1rem; width: fit-content; } 
+        h1 { font-size: auto; }
+    }
 
     #contactAnch, #aboutAnch, #projectsAnch { top: -1rem; }
     .proj-row
@@ -546,13 +583,16 @@ h1, h2
 @media (min-width: 992px) /* Breakpoint for Large Devices and up */
 {
     header{ position: fixed; background: $body-color; }
-    footer{ position: static; background: $body-color; }
+    footer{ position: static; background: $body-color; margin-top: 2.5rem; }
     /* Header Nav CSS - START */
     .hamburger, #mobileNav{ display: none; }
+    #siteLogo{ max-height: 4rem; }
     #desktopNav{ display: flex; }
     .no-scroll{ overflow: visible; }
-    nav /* Nested CSS for Navigation Items */
+    .navbar // Styling for the navbar & navigation items
     {
+        padding: .5rem 1.5rem;
+
         .nav-item { width: auto; }
         a 
         { 
@@ -562,7 +602,9 @@ h1, h2
     }
     /* Header Nav CSS - END */
     #screenOverlay, #screenOverlay.active{ display: none; }
+
     #pageContent{ top: 2rem; }
+
     .company-logo{ margin-bottom: 0; }
     .proj-row
     {
@@ -578,8 +620,13 @@ h1, h2
 
     #overlayOne, #overlayTwo, #overlayThree, #overlayFour
     {
-        h2{ font-size: 2rem; }
-        p, .project-links .project-btn{ margin-bottom: 1rem; }
+        .details-container
+        {
+            h2{ font-size: 2rem; }
+            p, .project-links .project-btn{ margin-bottom: 1rem; }
+        }
+
+        .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four { font-size: 1.75rem; }
     }
 
     .submit-container, .socialIcons{ text-align: left; }
@@ -611,8 +658,11 @@ h1, h2
     #overlayOne, #overlayTwo, #overlayThree, #overlayFour
     {
         padding: 3.5%;
-        h2{ font-size: 2rem; }
-        .project-links{ margin-top: .5rem; }
-        p, .tool, .project-links .project-btn{ font-size: 1rem; margin-bottom: 1rem; }
+        .details-container
+        {
+            h2{ font-size: 2rem; }
+            .project-links{ margin-top: .5rem; }
+            p, .tool, .project-links .project-btn{ font-size: 1rem; margin-bottom: 1rem; }
+        }
     }
 }

@@ -11,12 +11,10 @@ $(document).ready(function ()
         img[0] = new Image();
         img[1] = new Image();
         img[2] = new Image();
-        img[3] = new Image();
 
         img[0].src = "images/jpg/me-1.jpg"; // Me @ top
-        img[1].src = "images/gif/teenie-robo-screen.gif"; // Teenie-Robo gif
-        img[2].src = "images/png/portfolio-web-screen.png"; // Portfolio Site png
-        img[3].src = "images/jpg/me-4.jpg"; // Me @ about
+        img[1].src = "images/png/portfolio-web-screen.png"; // Portfolio Site png
+        img[2].src = "images/jpg/me-4.jpg"; // Me @ about
     }
 
     const pageBody = document.body;
@@ -58,6 +56,14 @@ $(document.getElementById("projContainerThree")).click(function ()
 $(".close-overlay-three").click(function () 
 {
     $(document.getElementById("overlayThree")).toggleClass("active");
+});
+$(document.getElementById("projContainerFive")).click(function () 
+{
+    $(document.getElementById("overlayFive")).toggleClass("active");
+});
+$(".close-overlay-five").click(function () 
+{
+    $(document.getElementById("overlayFive")).toggleClass("active");
 });
 
 // Initialization for the AOS CSS Animations

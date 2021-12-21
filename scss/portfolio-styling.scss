@@ -39,12 +39,18 @@ body // Universal styling for elements within the page's body
     color: $white-text;
 
     img, button, .anchor{ caret-color: transparent; }
-
     a 
     { 
         color: $primary-text;
         text-decoration: none; 
         &:hover, &:focus, &:active { color: $secondary-text; }
+    }
+    .rounded-link
+    {
+        border: 0.1rem solid;
+        border-radius: 10rem;
+        padding: 0.5rem 1rem;
+        text-decoration: none;  
     }
 }
 
@@ -175,7 +181,7 @@ footer
 #screenOverlay.active{ display: block; }
 #contactAnch, #aboutAnch, #projectsAnch { position: relative; top: -5rem; }
 
-#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection{ padding: 5% 10%; }
+#welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection{ padding: 5%; }
 
 #welcomeSection
 { 
@@ -189,9 +195,6 @@ footer
         .resume-btn
         {
             caret-color: transparent;
-            border: .2rem solid;
-            border-radius: 1rem;
-            padding: 0.5rem;
             display: block;
             margin: 1rem 0;
             font-size: 1.25rem;
@@ -223,16 +226,15 @@ h1, h2
 { 
     justify-content: space-between; 
 
-    .proj-one, .proj-two, .proj-three, .proj-four
+    .proj-one, .proj-two, .proj-three, .proj-four, .proj-five
     {
         background-repeat: no-repeat;
         border-radius: 1rem;
-        min-height: 20rem;
-        width: 20rem;
+        min-height: 22.5rem;
         overflow: hidden;
         margin: 1rem auto;
         border: .2rem solid $white-text;
-        max-width: 50rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
+        max-width: 95%;
     
         .video-container 
         {
@@ -250,7 +252,7 @@ h1, h2
             }
         }
     }
-    .proj-one
+    .proj-one, .proj-five
     { 
         //background-image: url(../images/gif/exalted-dawn-test.gif);
         padding: 0;
@@ -267,10 +269,10 @@ h1, h2
     }
     .proj-three
     { 
-        background-image: url(../images/png/portfolio-web-screen.png);
+        background-image: url('../images/png/portfolio-web-screen.png');
         background-position: center;
-        background-color: $primary-color;
-        background-size: cover;
+        background-color: $body-color;
+        background-size: contain;
     }
     .proj-four
     { 
@@ -283,7 +285,7 @@ h1, h2
         user-select: none;
     }
 }
-#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour
+#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour, #projContainerFive
 {
     opacity: 0;  
     margin: 0 auto;
@@ -293,7 +295,7 @@ h1, h2
     left: 0;
     cursor: pointer;
 }
-#overlayOne, #overlayTwo, #overlayThree, #overlayFour 
+#overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive
 {
     opacity: 0;
     visibility: hidden;
@@ -338,19 +340,24 @@ h1, h2
             font-size: .8rem;
             max-width: 30rem;
             margin: 0 auto;
-            margin-bottom: .8rem; 
+            //margin-bottom: .8rem; 
         }
-        .tool
+        .toolkits-used
         {
-            background-color: $primary-color;
-            padding: .5rem;
-            border-radius: 1rem;
-            margin-bottom: 3%;
-            margin-right: 1%;
-            min-width: 4rem;
-            display: inline-table;
-            font-size: .8rem;
-            text-align: center;
+            //max-height: 5rem;
+            //overflow-y: auto;
+            .tool
+            {
+                background-color: $primary-color;
+                padding: .5rem;
+                border-radius: 10rem;
+                max-width: 8rem;
+                font-size: .8rem;
+                text-align: center;
+                display: block;
+                margin: 0 auto;
+                margin-top: .5rem;
+            }
         }
         .project-links
         {
@@ -374,7 +381,7 @@ h1, h2
         }
     }
 
-    .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four 
+    .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four, .close-overlay-five
     {
         caret-color: transparent;
         position: absolute;
@@ -567,9 +574,10 @@ h1, h2
     .proj-row
     {
         margin-bottom: 3%;
-        .proj-one, .proj-two, .proj-three, .proj-four
+        .proj-one, .proj-two, .proj-three, .proj-four, .proj-five
         {
             margin-bottom: 0;
+            max-width: 50rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
         }
         .col-md-6
         {   
@@ -606,27 +614,31 @@ h1, h2
     #pageContent{ top: 2rem; }
 
     .company-logo{ margin-bottom: 0; }
+
+    #welcomeSection, #clientsSection, #aboutSection, #toolkitSection, #projectsSection, #contactSection
+    {
+        padding: 5% 10%;
+    }
+
     .proj-row
     {
         margin-bottom: 2%;
-        .proj-one, .proj-two
-        {
-            min-height: 21rem;
-            width: 100%;
-        }
+
+        .proj-one, .proj-two, .proj-three, .proj-four, .proj-five{ min-height: 25rem; }
     }
     .about-img{ margin: 0; }
     .w-100{ display: none; }
 
-    #overlayOne, #overlayTwo, #overlayThree, #overlayFour
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive
     {
         .details-container
         {
             h2{ font-size: 2rem; }
-            p, .project-links .project-btn{ margin-bottom: 1rem; }
+            .project-links .project-btn{ margin-bottom: 1rem; }
+            .toolkits-used{ .tool{ margin-top: .75rem; } }
         }
 
-        .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four { font-size: 1.75rem; }
+        .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four, .close-overlay-five { font-size: 1.75rem; }
     }
 
     .submit-container, .socialIcons{ text-align: left; }
@@ -655,14 +667,15 @@ h1, h2
 }
 @media (min-width: 1200px) /* Breakpoint for X-Large Devices and up */
 {
-    #overlayOne, #overlayTwo, #overlayThree, #overlayFour
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive
     {
         padding: 3.5%;
         .details-container
         {
             h2{ font-size: 2rem; }
-            .project-links{ margin-top: .5rem; }
-            p, .tool, .project-links .project-btn{ font-size: 1rem; margin-bottom: 1rem; }
+            .project-links{ margin-top: 1rem; }
+            .project-links .project-btn{ font-size: 1rem; margin-bottom: 1rem; }
+            p, .tool{ font-size: 1rem; }
         }
     }
 }

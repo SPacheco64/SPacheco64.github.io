@@ -3,6 +3,8 @@
     <head>
         <meta charset = "UTF-8">
         <title>Thank You</title>
+        <link rel = "shortcut icon" type = "image/jpg" href = "/images/png/site-favicon.ico"/>
+
         <meta name = "viewport" content = "width = device-width, initial-scale = 1">
         
         <!-- Bootstrap CSS -->
@@ -14,18 +16,23 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <!-- Custom Site CSS -->
-        <link rel = "stylesheet" href = "css/portfolio-styling.css">
+        <link rel = "stylesheet" href = "/css/portfolio-styling.css">
 
     </head>
 
     <body>
         <div style = "text-align: center; margin: 15%;">
-            <img alt = "Sergio's Logo" src = "images/png/placeholder-logo-2.png"><br>
+            <picture>
+                <source srcset = "/assets/webp/site-logo.webp">
+                <source srcset = "/assets/png/site-logo.png">
+                <img src = "/assets/png/site-logo.png" alt = "Developer Logo">
+            </picture>  
+            <br>
 
             Your message has been sent successfully! Thank you!<br>
             I will get back to you as soon as I can!<br><br>
 
-            <a href = "https://www.sergio-pacheco.com">Return to Main Site</a>
+            <a class = "rounded-link" href = "https://www.sergio-pacheco.com">Return to Main Site</a>
         </div>
     </body>
 </html>

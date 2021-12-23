@@ -248,7 +248,7 @@ h1, h2 {
   justify-content: space-between;
 }
 
-.proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four, .proj-row .proj-five {
+.proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four, .proj-row .proj-five, .proj-row .proj-six {
   background-repeat: no-repeat;
   border-radius: 1rem;
   min-height: 22.5rem;
@@ -258,13 +258,13 @@ h1, h2 {
   max-width: 95%;
 }
 
-.proj-row .proj-one .video-container, .proj-row .proj-two .video-container, .proj-row .proj-three .video-container, .proj-row .proj-four .video-container, .proj-row .proj-five .video-container {
+.proj-row .proj-one .video-container, .proj-row .proj-two .video-container, .proj-row .proj-three .video-container, .proj-row .proj-four .video-container, .proj-row .proj-five .video-container, .proj-row .proj-six .video-container {
   height: 100%;
   width: 100%;
   position: relative;
 }
 
-.proj-row .proj-one .video-container video, .proj-row .proj-two .video-container video, .proj-row .proj-three .video-container video, .proj-row .proj-four .video-container video, .proj-row .proj-five .video-container video {
+.proj-row .proj-one .video-container video, .proj-row .proj-two .video-container video, .proj-row .proj-three .video-container video, .proj-row .proj-four .video-container video, .proj-row .proj-five .video-container video, .proj-row .proj-six .video-container video {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -285,10 +285,17 @@ h1, h2 {
 }
 
 .proj-row .proj-three {
-  background-image: url("../images/png/portfolio-web-screen.png");
+  background-image: url("/assets/png/portfolio-web-screen.png");
   background-position: center;
   background-color: #030e12;
   background-size: contain;
+}
+
+.proj-row .proj-six {
+  background-image: url("/assets/png/euphyllia-life-web-screen.png");
+  background-position: center;
+  background-color: #0b0c10;
+  background-size: cover;
 }
 
 .proj-row .proj-four {
@@ -301,7 +308,7 @@ h1, h2 {
   user-select: none;
 }
 
-#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour, #projContainerFive {
+#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour, #projContainerFive, #projContainerSix {
   opacity: 0;
   margin: 0 auto;
   position: absolute;
@@ -311,7 +318,7 @@ h1, h2 {
   cursor: pointer;
 }
 
-#overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive {
+#overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive, #overlaySix {
   opacity: 0;
   visibility: hidden;
   margin: 0 auto;
@@ -329,12 +336,12 @@ h1, h2 {
   transition: opacity 0.3s ease;
 }
 
-#overlayOne.active, #overlayTwo.active, #overlayThree.active, #overlayFour.active, #overlayFive.active {
+#overlayOne.active, #overlayTwo.active, #overlayThree.active, #overlayFour.active, #overlayFive.active, #overlaySix.active {
   opacity: 1;
   visibility: visible;
 }
 
-#overlayOne .details-container, #overlayTwo .details-container, #overlayThree .details-container, #overlayFour .details-container, #overlayFive .details-container {
+#overlayOne .details-container, #overlayTwo .details-container, #overlayThree .details-container, #overlayFour .details-container, #overlayFive .details-container, #overlaySix .details-container {
   position: absolute;
   left: 0;
   right: 0;
@@ -345,19 +352,19 @@ h1, h2 {
   width: 90%;
 }
 
-#overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2, #overlayFive .details-container h2 {
+#overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2, #overlayFive .details-container h2, #overlaySix .details-container h2 {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5rem;
 }
 
-#overlayOne .details-container p, #overlayTwo .details-container p, #overlayThree .details-container p, #overlayFour .details-container p, #overlayFive .details-container p {
+#overlayOne .details-container p, #overlayTwo .details-container p, #overlayThree .details-container p, #overlayFour .details-container p, #overlayFive .details-container p, #overlaySix .details-container p {
   font-size: .8rem;
   max-width: 30rem;
   margin: 0 auto;
 }
 
-#overlayOne .details-container .toolkits-used .tool, #overlayTwo .details-container .toolkits-used .tool, #overlayThree .details-container .toolkits-used .tool, #overlayFour .details-container .toolkits-used .tool, #overlayFive .details-container .toolkits-used .tool {
+#overlayOne .details-container .toolkits-used .tool, #overlayTwo .details-container .toolkits-used .tool, #overlayThree .details-container .toolkits-used .tool, #overlayFour .details-container .toolkits-used .tool, #overlayFive .details-container .toolkits-used .tool, #overlaySix .details-container .toolkits-used .tool {
   background-color: #007FD9;
   padding: .5rem;
   border-radius: 10rem;
@@ -369,13 +376,13 @@ h1, h2 {
   margin-top: .5rem;
 }
 
-#overlayOne .details-container .project-links, #overlayTwo .details-container .project-links, #overlayThree .details-container .project-links, #overlayFour .details-container .project-links, #overlayFive .details-container .project-links {
+#overlayOne .details-container .project-links, #overlayTwo .details-container .project-links, #overlayThree .details-container .project-links, #overlayFour .details-container .project-links, #overlayFive .details-container .project-links, #overlaySix .details-container .project-links {
   margin-top: .8rem;
   display: flex;
   justify-content: center;
 }
 
-#overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn, #overlayFive .details-container .project-links .project-btn {
+#overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn, #overlayFive .details-container .project-links .project-btn, #overlaySix .details-container .project-links .project-btn {
   background-color: #030e12;
   padding: .75rem 1rem;
   border-radius: 30rem;
@@ -386,12 +393,12 @@ h1, h2 {
   margin: 0 0.25rem;
 }
 
-#overlayOne .details-container .project-links .project-btn:hover, #overlayTwo .details-container .project-links .project-btn:hover, #overlayThree .details-container .project-links .project-btn:hover, #overlayFour .details-container .project-links .project-btn:hover, #overlayFive .details-container .project-links .project-btn:hover {
+#overlayOne .details-container .project-links .project-btn:hover, #overlayTwo .details-container .project-links .project-btn:hover, #overlayThree .details-container .project-links .project-btn:hover, #overlayFour .details-container .project-links .project-btn:hover, #overlayFive .details-container .project-links .project-btn:hover, #overlaySix .details-container .project-links .project-btn:hover {
   background-color: #fff;
   font-weight: bold;
 }
 
-#overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayOne .close-overlay-five, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayTwo .close-overlay-five, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayThree .close-overlay-five, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four, #overlayFour .close-overlay-five, #overlayFive .close-overlay-one, #overlayFive .close-overlay-two, #overlayFive .close-overlay-three, #overlayFive .close-overlay-four, #overlayFive .close-overlay-five {
+#overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayOne .close-overlay-five, #overlayOne .close-overlay-six, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayTwo .close-overlay-five, #overlayTwo .close-overlay-six, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayThree .close-overlay-five, #overlayThree .close-overlay-six, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four, #overlayFour .close-overlay-five, #overlayFour .close-overlay-six, #overlayFive .close-overlay-one, #overlayFive .close-overlay-two, #overlayFive .close-overlay-three, #overlayFive .close-overlay-four, #overlayFive .close-overlay-five, #overlayFive .close-overlay-six, #overlaySix .close-overlay-one, #overlaySix .close-overlay-two, #overlaySix .close-overlay-three, #overlaySix .close-overlay-four, #overlaySix .close-overlay-five, #overlaySix .close-overlay-six {
   caret-color: transparent;
   position: absolute;
   top: 4%;
@@ -401,7 +408,7 @@ h1, h2 {
   z-index: 200;
 }
 
-#overlayOne .close-overlay-one:hover, #overlayOne .close-overlay-two:hover, #overlayOne .close-overlay-three:hover, #overlayOne .close-overlay-four:hover, #overlayOne .close-overlay-five:hover, #overlayTwo .close-overlay-one:hover, #overlayTwo .close-overlay-two:hover, #overlayTwo .close-overlay-three:hover, #overlayTwo .close-overlay-four:hover, #overlayTwo .close-overlay-five:hover, #overlayThree .close-overlay-one:hover, #overlayThree .close-overlay-two:hover, #overlayThree .close-overlay-three:hover, #overlayThree .close-overlay-four:hover, #overlayThree .close-overlay-five:hover, #overlayFour .close-overlay-one:hover, #overlayFour .close-overlay-two:hover, #overlayFour .close-overlay-three:hover, #overlayFour .close-overlay-four:hover, #overlayFour .close-overlay-five:hover, #overlayFive .close-overlay-one:hover, #overlayFive .close-overlay-two:hover, #overlayFive .close-overlay-three:hover, #overlayFive .close-overlay-four:hover, #overlayFive .close-overlay-five:hover {
+#overlayOne .close-overlay-one:hover, #overlayOne .close-overlay-two:hover, #overlayOne .close-overlay-three:hover, #overlayOne .close-overlay-four:hover, #overlayOne .close-overlay-five:hover, #overlayOne .close-overlay-six:hover, #overlayTwo .close-overlay-one:hover, #overlayTwo .close-overlay-two:hover, #overlayTwo .close-overlay-three:hover, #overlayTwo .close-overlay-four:hover, #overlayTwo .close-overlay-five:hover, #overlayTwo .close-overlay-six:hover, #overlayThree .close-overlay-one:hover, #overlayThree .close-overlay-two:hover, #overlayThree .close-overlay-three:hover, #overlayThree .close-overlay-four:hover, #overlayThree .close-overlay-five:hover, #overlayThree .close-overlay-six:hover, #overlayFour .close-overlay-one:hover, #overlayFour .close-overlay-two:hover, #overlayFour .close-overlay-three:hover, #overlayFour .close-overlay-four:hover, #overlayFour .close-overlay-five:hover, #overlayFour .close-overlay-six:hover, #overlayFive .close-overlay-one:hover, #overlayFive .close-overlay-two:hover, #overlayFive .close-overlay-three:hover, #overlayFive .close-overlay-four:hover, #overlayFive .close-overlay-five:hover, #overlayFive .close-overlay-six:hover, #overlaySix .close-overlay-one:hover, #overlaySix .close-overlay-two:hover, #overlaySix .close-overlay-three:hover, #overlaySix .close-overlay-four:hover, #overlaySix .close-overlay-five:hover, #overlaySix .close-overlay-six:hover {
   color: #38acff;
 }
 
@@ -599,7 +606,7 @@ h1, h2 {
   .proj-row {
     margin-bottom: 3%;
   }
-  .proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four, .proj-row .proj-five {
+  .proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four, .proj-row .proj-five, .proj-row .proj-six {
     margin-bottom: 0;
     max-width: 50rem !important;
   }
@@ -660,7 +667,7 @@ h1, h2 {
   .proj-row {
     margin-bottom: 2%;
   }
-  .proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four, .proj-row .proj-five {
+  .proj-row .proj-one, .proj-row .proj-two, .proj-row .proj-three, .proj-row .proj-four, .proj-row .proj-five, .proj-row .proj-six {
     min-height: 25rem;
   }
   .about-img {
@@ -669,16 +676,16 @@ h1, h2 {
   .w-100 {
     display: none;
   }
-  #overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2, #overlayFive .details-container h2 {
+  #overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2, #overlayFive .details-container h2, #overlaySix .details-container h2 {
     font-size: 2rem;
   }
-  #overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn, #overlayFive .details-container .project-links .project-btn {
+  #overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn, #overlayFive .details-container .project-links .project-btn, #overlaySix .details-container .project-links .project-btn {
     margin-bottom: 1rem;
   }
-  #overlayOne .details-container .toolkits-used .tool, #overlayTwo .details-container .toolkits-used .tool, #overlayThree .details-container .toolkits-used .tool, #overlayFour .details-container .toolkits-used .tool, #overlayFive .details-container .toolkits-used .tool {
+  #overlayOne .details-container .toolkits-used .tool, #overlayTwo .details-container .toolkits-used .tool, #overlayThree .details-container .toolkits-used .tool, #overlayFour .details-container .toolkits-used .tool, #overlayFive .details-container .toolkits-used .tool, #overlaySix .details-container .toolkits-used .tool {
     margin-top: .75rem;
   }
-  #overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayOne .close-overlay-five, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayTwo .close-overlay-five, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayThree .close-overlay-five, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four, #overlayFour .close-overlay-five, #overlayFive .close-overlay-one, #overlayFive .close-overlay-two, #overlayFive .close-overlay-three, #overlayFive .close-overlay-four, #overlayFive .close-overlay-five {
+  #overlayOne .close-overlay-one, #overlayOne .close-overlay-two, #overlayOne .close-overlay-three, #overlayOne .close-overlay-four, #overlayOne .close-overlay-five, #overlayOne .close-overlay-six, #overlayTwo .close-overlay-one, #overlayTwo .close-overlay-two, #overlayTwo .close-overlay-three, #overlayTwo .close-overlay-four, #overlayTwo .close-overlay-five, #overlayTwo .close-overlay-six, #overlayThree .close-overlay-one, #overlayThree .close-overlay-two, #overlayThree .close-overlay-three, #overlayThree .close-overlay-four, #overlayThree .close-overlay-five, #overlayThree .close-overlay-six, #overlayFour .close-overlay-one, #overlayFour .close-overlay-two, #overlayFour .close-overlay-three, #overlayFour .close-overlay-four, #overlayFour .close-overlay-five, #overlayFour .close-overlay-six, #overlayFive .close-overlay-one, #overlayFive .close-overlay-two, #overlayFive .close-overlay-three, #overlayFive .close-overlay-four, #overlayFive .close-overlay-five, #overlayFive .close-overlay-six, #overlaySix .close-overlay-one, #overlaySix .close-overlay-two, #overlaySix .close-overlay-three, #overlaySix .close-overlay-four, #overlaySix .close-overlay-five, #overlaySix .close-overlay-six {
     font-size: 1.75rem;
   }
   .submit-container, .socialIcons {
@@ -704,20 +711,20 @@ h1, h2 {
 }
 
 @media (min-width: 1200px) {
-  #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive {
+  #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive, #overlaySix {
     padding: 3.5%;
   }
-  #overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2, #overlayFive .details-container h2 {
+  #overlayOne .details-container h2, #overlayTwo .details-container h2, #overlayThree .details-container h2, #overlayFour .details-container h2, #overlayFive .details-container h2, #overlaySix .details-container h2 {
     font-size: 2rem;
   }
-  #overlayOne .details-container .project-links, #overlayTwo .details-container .project-links, #overlayThree .details-container .project-links, #overlayFour .details-container .project-links, #overlayFive .details-container .project-links {
+  #overlayOne .details-container .project-links, #overlayTwo .details-container .project-links, #overlayThree .details-container .project-links, #overlayFour .details-container .project-links, #overlayFive .details-container .project-links, #overlaySix .details-container .project-links {
     margin-top: 1rem;
   }
-  #overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn, #overlayFive .details-container .project-links .project-btn {
+  #overlayOne .details-container .project-links .project-btn, #overlayTwo .details-container .project-links .project-btn, #overlayThree .details-container .project-links .project-btn, #overlayFour .details-container .project-links .project-btn, #overlayFive .details-container .project-links .project-btn, #overlaySix .details-container .project-links .project-btn {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
-  #overlayOne .details-container p, #overlayOne .details-container .tool, #overlayTwo .details-container p, #overlayTwo .details-container .tool, #overlayThree .details-container p, #overlayThree .details-container .tool, #overlayFour .details-container p, #overlayFour .details-container .tool, #overlayFive .details-container p, #overlayFive .details-container .tool {
+  #overlayOne .details-container p, #overlayOne .details-container .tool, #overlayTwo .details-container p, #overlayTwo .details-container .tool, #overlayThree .details-container p, #overlayThree .details-container .tool, #overlayFour .details-container p, #overlayFour .details-container .tool, #overlayFive .details-container p, #overlayFive .details-container .tool, #overlaySix .details-container p, #overlaySix .details-container .tool {
     font-size: 1rem;
   }
 }

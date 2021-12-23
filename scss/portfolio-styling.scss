@@ -226,7 +226,7 @@ h1, h2
 { 
     justify-content: space-between; 
 
-    .proj-one, .proj-two, .proj-three, .proj-four, .proj-five
+    .proj-one, .proj-two, .proj-three, .proj-four, .proj-five, .proj-six
     {
         background-repeat: no-repeat;
         border-radius: 1rem;
@@ -254,12 +254,12 @@ h1, h2
     }
     .proj-one, .proj-five
     { 
-        //background-image: url(../images/gif/exalted-dawn-test.gif);
+        //background-image: url(/assets/gif/exalted-dawn-test.gif);
         padding: 0;
     }
     .proj-two
     { 
-        // background-image: url(../images/gif/teenie-robo-screen.gif); 
+        // background-image: url(/assets/gif/teenie-robo-screen.gif); 
         background-color: #bab6b3;
         .video-container 
         {
@@ -269,10 +269,17 @@ h1, h2
     }
     .proj-three
     { 
-        background-image: url('../images/png/portfolio-web-screen.png');
+        background-image: url('/assets/png/portfolio-web-screen.png');
         background-position: center;
         background-color: $body-color;
         background-size: contain;
+    }
+    .proj-six
+    {
+        background-image: url('/assets/png/euphyllia-life-web-screen.png');
+        background-position: center;
+        background-color: #0b0c10;
+        background-size: cover;
     }
     .proj-four
     { 
@@ -285,7 +292,7 @@ h1, h2
         user-select: none;
     }
 }
-#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour, #projContainerFive
+#projContainerOne, #projContainerTwo, #projContainerThree, #projContainerFour, #projContainerFive, #projContainerSix
 {
     opacity: 0;  
     margin: 0 auto;
@@ -295,7 +302,7 @@ h1, h2
     left: 0;
     cursor: pointer;
 }
-#overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive
+#overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive, #overlaySix
 {
     opacity: 0;
     visibility: hidden;
@@ -381,7 +388,7 @@ h1, h2
         }
     }
 
-    .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four, .close-overlay-five
+    .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four, .close-overlay-five, .close-overlay-six
     {
         caret-color: transparent;
         position: absolute;
@@ -574,7 +581,7 @@ h1, h2
     .proj-row
     {
         margin-bottom: 3%;
-        .proj-one, .proj-two, .proj-three, .proj-four, .proj-five
+        .proj-one, .proj-two, .proj-three, .proj-four, .proj-five, .proj-six
         {
             margin-bottom: 0;
             max-width: 50rem !important; // Max-width to keep responisve sizing from creating too large of objects when zoomed out
@@ -624,12 +631,12 @@ h1, h2
     {
         margin-bottom: 2%;
 
-        .proj-one, .proj-two, .proj-three, .proj-four, .proj-five{ min-height: 25rem; }
+        .proj-one, .proj-two, .proj-three, .proj-four, .proj-five, .proj-six{ min-height: 25rem; }
     }
     .about-img{ margin: 0; }
     .w-100{ display: none; }
 
-    #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive, #overlaySix
     {
         .details-container
         {
@@ -638,7 +645,7 @@ h1, h2
             .toolkits-used{ .tool{ margin-top: .75rem; } }
         }
 
-        .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four, .close-overlay-five { font-size: 1.75rem; }
+        .close-overlay-one, .close-overlay-two, .close-overlay-three, .close-overlay-four, .close-overlay-five, .close-overlay-six { font-size: 1.75rem; }
     }
 
     .submit-container, .socialIcons{ text-align: left; }
@@ -667,7 +674,7 @@ h1, h2
 }
 @media (min-width: 1200px) /* Breakpoint for X-Large Devices and up */
 {
-    #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive
+    #overlayOne, #overlayTwo, #overlayThree, #overlayFour, #overlayFive, #overlaySix
     {
         padding: 3.5%;
         .details-container

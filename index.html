@@ -5,7 +5,7 @@
     <head>
         <meta charset = "UTF-8">
         <title>Sergio Pacheco | Dev Portfolio</title>
-        <link rel = "shortcut icon" type = "image/jpg" href = "/images/png/site-favicon.ico"/>
+        <link rel = "shortcut icon" type = "image/jpg" href = "/assets/png/site-favicon.ico"/>
 
         <meta name = "description" content = "Front-End Web Development Portfolio Website for Sergio Pacheco.">
         <meta name = "keywords" content = "Frontend, Web Developer, Sergio, Pacheco, HTML, SCSS, CSS, JavaScript, Bootstrap, jQuery">
@@ -20,12 +20,15 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
+        <!-- Modernizr JS to check Webp Browser Support -->
+        <!--<script src = "/js/modernizr-custom.js"></script>-->
+
         <!-- Custom Site CSS -->
         <link rel = "stylesheet" href = "/css/portfolio-styling.min.css">
 
         <!-- Custom PHP for Sending Messages -->
         <?php
-            include("message-retrieval.php")
+            include("/message-retrieval.php")
         ?>
 
         <!-- AOS CSS Animations Includes-->
@@ -47,14 +50,11 @@
             <!-- Header Navigation -->
             <nav class = "navbar navbar-expand-lg">
                 <div class = "container-fluid">
-                    <!--
                     <picture>
-                        <source media = "(min-width: 992px)" srcset = "/images/png/placeholder-logo-2.png"> 
-                        <source media = "" srcset = "/images/png/placeholder-logo-2-m.png"> 
-                        <img src = "/images/png/placeholder-logo-2.png" alt = "Developer Logo" id = "siteLogo"> 
-                    </picture>
-                    -->
-                    <img src = "/images/png/placeholder-logo-2.png" alt = "Developer Logo" id = "siteLogo">
+                        <source srcset = "/assets/webp/site-logo.webp">
+                        <source srcset = "/assets/png/site-logo.png">
+                        <img src = "/assets/png/site-logo.png" alt = "Developer Logo" id = "siteLogo">
+                    </picture>   
 
                     <button class = "hamburger navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#mobileNav" aria-controls = "mobileNav" aria-expanded = "false" aria-label = "Toggle mobile navigation">
                         <div class = "bar1"></div>
@@ -125,13 +125,17 @@
                         <div class = "welcome-text" data-aos = "fade-up" data-aos-once = "true">
                             <h1 class = "welcome-header">Hiya! My name is Sergio.</h1>
                             I am a passionate Front-End Developer and Designer who enjoys developing creative, fully functional experiences for users.<br>
-                            <a target = "_blank" class = "resume-btn rounded-link" href = "/images/pdf/Sergio Pacheco - Resume.pdf">
+                            <a target = "_blank" class = "resume-btn rounded-link" href = "/assets/pdf/Sergio Pacheco - Resume.pdf">
                                 Check out my R&eacute;sum&eacute; <i class="fas fa-file-download"></i>
                             </a>
                         </div>
                     </div>
                     <div class = "col-md-5 d-flex right-content order-1 order-md-2" data-aos = "fade-up" data-aos-once = "true">
-                        <img class = "welcome-img" alt = "Sergio Pacheco Picture" src = "/images/jpg/me-1.jpg">
+                        <picture>
+                            <source srcset = "/assets/webp/me-1.webp">
+                            <source srcset = "/assets/png/me-1.png">
+                            <img class = "welcome-img" alt = "Photo of Sergio Pacheco" src = "/assets/jpg/me-1.jpg">
+                        </picture>       
                     </div>
                 </div>
             </div>
@@ -141,10 +145,10 @@
                 <h2 class = "section-header">Personal/Freelance Project Showcase</h2>
                 <span class = "header-subtxt">(Click on a project for details)</span>
                 <div class = "row proj-row">
-                    <div class = "proj-five col-md-6 d-flex left-content" data-aos = "flip-right" data-aos-once = "true">
+                    <div class = "proj-five col-md-6 d-flex" data-aos = "flip-right" data-aos-once = "true">
                         <div class = "video-container">
                             <video autoplay loop muted>
-                                <source src = "/images/mp4/willows-reef-vid.mp4" type = "video/mp4">
+                                <source src = "/assets/mp4/willows-reef-vid.mp4" type = "video/mp4">
                                 Unable to play video in your browser.
                             </video>
                         </div>
@@ -206,10 +210,62 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "proj-one col-md-6 d-flex right-content" data-aos = "flip-left" data-aos-once = "true">
+                    <div class = "proj-six col-md-6 d-flex" data-aos = "flip-left" data-aos-once = "true">
+                        <div id = "projContainerSix">
+                            &nbsp;
+                        </div>
+                        <div id = "overlaySix">
+                            <i class = "close-overlay-six far fa-times-circle">
+                                &nbsp;
+                            </i>
+                            <div class = "details-container m-auto">
+                                <h2>Euphyllia Life <br>Website
+                                </h2>
+                                <p>
+                                    A fully-functional Shopify website designed and developed for Euphyllia Life.
+                                    The website is meant to serve as an outlet for information on the aquarium hobby,
+                                    and a shop for aquarium products.
+                                </p>
+                                <div class = "toolkits-used row align-items-center justify-content-center">
+                                    <div class = "col-4 col-xl-3">
+                                        <span class = "tool">
+                                            HTML5
+                                        </span>
+                                    </div>
+                                    <div class = "col-4 col-xl-3">
+                                        <span class = "tool">
+                                            SCSS
+                                        </span>
+                                    </div>
+                                    <div class = "col-4 col-xl-3">
+                                        <span class = "tool">
+                                            Shopify
+                                        </span>
+                                    </div>
+                                    <div class = "col-4 col-xl-3">
+                                        <span class = "tool">
+                                            SEO
+                                        </span>
+                                    </div>
+                                    <div class = "col-4 col-xl-3">
+                                        <span class = "tool">
+                                            Branding
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class = "project-links">
+                                    <span class = "project-btn" style = "color: #007fd9; pointer-events: none;">Links Coming Soon...</span>
+                                    <!--<a target = "_blank" class = "project-btn" href = "https://www.willowsreef.com" rel = "noopener norferrer">View Live</a>-->
+                                    <!--<a target = "_blank" class = "project-btn" href = "" rel = "noopener norferrer">GitHub</a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "proj-one col-md-6 d-flex" data-aos = "flip-right" data-aos-once = "true">
                         <div class = "video-container">
                             <video autoplay loop muted>
-                                <source src = "/images/mp4/exalted-dawn-vid.mp4" type = "video/mp4">
+                                <source src = "/assets/mp4/exalted-dawn-vid.mp4" type = "video/mp4">
                                 Unable to play video in your browser.
                             </video>
                         </div>
@@ -260,13 +316,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class = "row proj-row">
-                    <div class = "proj-two col-md-6 d-flex left-content" data-aos = "flip-right" data-aos-once = "true">
+                    <div class = "proj-two col-md-6 d-flex" data-aos = "flip-left" data-aos-once = "true">
                         <div class = "video-container">
                             <video autoplay loop muted>
-                                <source src = "/images/mp4/teenie-robo-vid.mp4" type = "video/mp4">
+                                <source src = "/assets/mp4/teenie-robo-vid.mp4" type = "video/mp4">
                                 Unable to play video in your browser.
                             </video>
                         </div>
@@ -312,7 +366,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "proj-three col-md-6 d-flex right-content" data-aos = "flip-left" data-aos-once = "true">
+                    <div class = "proj-three col-md-6 d-flex" data-aos = "flip-right" data-aos-once = "true">
                         <div id = "projContainerThree">
                             &nbsp;
                         </div>
@@ -364,11 +418,9 @@
                         </div>
                     </div>
 
-                    <!--
-                    <div class = "proj-four col-md-6 d-flex right-content" data-aos = "flip-left" data-aos-once = "true">
-                            Uploading More Projects Here Soon...
+                    <div class = "proj-four col-md-6 d-flex" data-aos = "flip-left" data-aos-once = "true">
+                            More projects to come soon...
                     </div>
-                    -->
                 </div>
             </div>
 
@@ -380,11 +432,15 @@
                             <h2 class = "section-header">About Me</h2> 
                             I am a graduate of the <a target = "_blank" href = "https://www.ucf.edu" rel = "noopener norferrer">University of Central Florida</a>, still looking to learn and grow as a developer each day.
                             When I am not coding things up, or spoiling my cat, I like to spend my time playing games with my friends, drinking copious amounts of tea and
-                            practicing digital/sprite art <img class = "mini-icon" alt = "" src = "/images/gif/blob-sprite.gif">.
+                            practicing digital/sprite art <img class = "mini-icon" alt = "" src = "/assets/gif/blob-sprite.gif">.
                         </div>
                     </div>
                     <div class = "col-md-5 d-flex right-content" data-aos = "fade-down" data-aos-once = "true">
-                        <img class = "about-img" alt = "" src = "/images/jpg/me-4.jpg">
+                        <picture>
+                            <source srcset = "/assets/webp/me-2.webp">
+                            <source srcset = "/assets/png/me-2.png">
+                            <img class = "about-img" alt = "" src = "/assets/jpg/me-2.jpg">
+                        </picture>       
                     </div>
                 </div>
             </div>
@@ -397,32 +453,56 @@
                 <div class = "row align-items-center justify-content-center mt-4">
                     <div class = "col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-lg-5 d-flex justify-content-center" data-aos = "flip-down" data-aos-once = "true">
                         <span class = "company-logo justify-content-center">
-                            <img alt = "Darden Restaurants, Inc." src = "/images/png/darden-logo.png">
+                            <picture>
+                                <source srcset = "/assets/webp/darden-logo.webp">
+                                <source srcset = "/assets/png/darden-logo.png">
+                                <img alt = "Darden Restaurants, Inc." src = "/assets/png/darden-logo.png">
+                            </picture> 
                         </span>
                     </div>
                     <div class = "col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-lg-5 d-flex justify-content-center" data-aos = "flip-down" data-aos-once = "true">
                         <span class = "company-logo justify-content-center">
-                            <img alt = "University of Central Florida" src = "/images/png/ucf-logo.png">
+                            <picture>
+                                <source srcset = "/assets/webp/ucf-logo.webp">
+                                <source srcset = "/assets/png/ucf-logo.png">
+                                <img alt = "University of Central Florida" src = "/assets/png/ucf-logo.png">
+                            </picture> 
                         </span>
                     </div>
                     <div class = "col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-lg-5 d-flex justify-content-center" data-aos = "flip-down" data-aos-once = "true">
                         <span class = "company-logo justify-content-center">
-                            <img alt = "Willow's Reef, LLC. Coral Feast." src = "/images/png/coral-feast-logo.png">
+                            <picture>
+                                <source srcset = "/assets/webp/coral-feast-logo.webp">
+                                <source srcset = "/assets/png/coral-feast-logo.png">
+                                <img alt = "Willow's Reef, LLC. Coral Feast." src = "/assets/png/coral-feast-logo.png">
+                            </picture>     
                         </span>
                     </div>
                     <div class = "col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-lg-5 d-flex justify-content-center" data-aos = "flip-down" data-aos-once = "true">
                         <span class = "company-logo justify-content-center">
-                            <img alt = "Euphyllia Life" src = "/images/png/euphyllia-life-logo.png">
+                            <picture>
+                                <source srcset = "/assets/webp/euphyllia-life-logo.webp">
+                                <source srcset = "/assets/png/euphyllia-life-logo.png">
+                                <img alt = "Euphyllia Life" src = "/assets/png/euphyllia-life-logo.png">
+                            </picture>     
                         </span>
                     </div>
                     <div class = "col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-lg-5 d-flex justify-content-center" data-aos = "flip-down" data-aos-once = "true">
                         <span class = "company-logo justify-content-center">
-                            <img alt = "M Fitness and Wellness" src = "/images/png/mfitandwell-logo.png">
+                            <picture>
+                                <source srcset = "/assets/webp/mfitandwell-logo.webp">
+                                <source srcset = "/assets/png/mfitandwell-logo.png">
+                                <img alt = "M Fitness and Wellness" src = "/assets/png/mfitandwell-logo.png">
+                            </picture> 
                         </span>
                     </div>
                     <div class = "col-12 col-md-6 col-lg-4 col-xxl-3 mt-3 mt-lg-5 d-flex justify-content-center" data-aos = "flip-down" data-aos-once = "true">
                         <span class = "company-logo justify-content-center">
-                            <img alt = "Skavnes Logo" src = "/images/png/skavnes-logo.png">
+                            <picture>
+                                <source srcset = "/assets/webp/skavnes-logo.webp">
+                                <source srcset = "/assets/png/skavnes-logo.png">
+                                <img alt = "Skavnes Logo" src = "/assets/png/skavnes-logo.png">
+                            </picture>     
                         </span>
                     </div>
                 </div>
@@ -463,7 +543,12 @@
                         </div>
                     </div>
                     <div class = "col-6 col-md-3 text-center justify-content-center toolkit-col" data-aos = "flip-up" data-aos-once = "true">
-                        <img class = "toolkit-icon" alt = "" src = "/images/png/jquery-icon.png"><br>
+                        <picture>
+                            <source srcset = "/assets/webp/jquery-icon.webp">
+                            <source srcset = "/assets/png/jquery-icon.png">
+                            <img class = "toolkit-icon" alt = "" src = "/assets/png/jquery-icon.png">
+                        </picture>   
+                        <br>   
                         <div class = "toolkit-name">
                             jQuery
                         </div>
@@ -475,13 +560,23 @@
                         </div>
                     </div>
                     <div class = "col-6 col-md-3 text-center justify-content-center toolkit-col" data-aos = "flip-up" data-aos-once = "true">
-                        <img class = "toolkit-icon" alt = "" src = "/images/png/photoshop-icon.png"><br>
+                        <picture>
+                            <source srcset = "/assets/webp/photoshop-icon.webp">
+                            <source srcset = "/assets/png/photoshop-icon.png">
+                            <img class = "toolkit-icon" alt = "" src = "/assets/png/photoshop-icon.png">
+                        </picture>
+                        <br>       
                         <div class = "toolkit-name">
                             Photoshop
                         </div>
                     </div>
                     <div class = "col-6 col-md-3 text-center justify-content-center toolkit-col" data-aos = "flip-up" data-aos-once = "true">
-                        <img class = "toolkit-icon" alt = "" src = "/images/png/visualstudio-icon.png"><br>
+                        <picture>
+                            <source srcset = "/assets/webp/visualstudio-icon.webp">
+                            <source srcset = "/assets/png/visualstudio-icon.png">
+                            <img class = "toolkit-icon" alt = "" src = "/assets/png/visualstudio-icon.png">
+                        </picture>     
+                        <br>  
                         <div class = "toolkit-name">
                             Visual Studio
                         </div>
